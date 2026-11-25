@@ -1,0 +1,32 @@
+---
+layout: page
+title: Contact
+lede: Get in touch about research, collaboration or joining the lab.
+permalink: /contact/
+---
+<div class="contact">
+  <section>
+    <h2>Address</h2>
+    <address>
+      {{ site.leader }}<br>
+      {% for line in site.address %}{{ line }}<br>{% endfor %}
+    </address>
+    <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Department+of+Mathematics+CUET+Chattogram">Open in Google Maps</a></p>
+  </section>
+  <section>
+    <h2>Email</h2>
+    {% if site.email != "" %}
+    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    {% else %}
+    <p>Please contact the lab through the {{ site.department }}, {{ site.institution_short }}.</p>
+    {% endif %}
+    {% if site.links.google_scholar != "" or site.links.researchgate != "" or site.links.orcid != "" %}
+    <h2>Online</h2>
+    <ul class="plain-links">
+      {% if site.links.google_scholar != "" %}<li><a href="{{ site.links.google_scholar }}">Google Scholar</a></li>{% endif %}
+      {% if site.links.researchgate != "" %}<li><a href="{{ site.links.researchgate }}">ResearchGate</a></li>{% endif %}
+      {% if site.links.orcid != "" %}<li><a href="{{ site.links.orcid }}">ORCID</a></li>{% endif %}
+    </ul>
+    {% endif %}
+  </section>
+</div>

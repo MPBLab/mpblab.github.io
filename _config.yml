@@ -1,0 +1,42 @@
+# ------------------------------------------------------------
+#  Site settings for the MPB Lab website
+#  After editing this file, the site rebuilds in about a minute.
+# ------------------------------------------------------------
+
+title: "Mathematical Physics & Biology Research Lab"
+short_name: "MPB Lab"
+description: >-
+  The Mathematical Physics & Biology Research Lab (MPB Lab) studies nonlinear
+  waves in plasmas and mathematical models of living systems. Led by
+  Prof. Dr. Md. Golam Hafez, Department of Mathematics, CUET, Bangladesh.
+
+leader: "Prof. Dr. Md. Golam Hafez"
+department: "Department of Mathematics"
+institution: "Chittagong University of Engineering & Technology (CUET)"
+institution_short: "CUET"
+address:
+  - "Department of Mathematics"
+  - "Chittagong University of Engineering & Technology (CUET)"
+  - "Chattogram 4349, Bangladesh"
+
+# Contact email for the lab. Leave empty ("") to hide it on the site.
+email: ""
+
+# Optional profile links. Leave empty ("") to hide.
+links:
+  google_scholar: ""
+  researchgate: ""
+  orcid: ""
+  github: "https://github.com/MPBLab"
+
+url: "https://mpblab.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

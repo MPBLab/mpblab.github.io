@@ -1,0 +1,21 @@
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <p class="site-footer__name">{{ site.title }}</p>
+      <p>Led by {{ site.leader }}</p>
+    </div>
+    <address>
+      {% for line in site.address %}{{ line }}<br>{% endfor %}
+      {% if site.email != "" %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
+    </address>
+    <ul class="site-footer__links">
+      {% if site.links.google_scholar != "" %}<li><a href="{{ site.links.google_scholar }}">Google Scholar</a></li>{% endif %}
+      {% if site.links.researchgate != "" %}<li><a href="{{ site.links.researchgate }}">ResearchGate</a></li>{% endif %}
+      {% if site.links.orcid != "" %}<li><a href="{{ site.links.orcid }}">ORCID</a></li>{% endif %}
+      {% if site.links.github != "" %}<li><a href="{{ site.links.github }}">GitHub</a></li>{% endif %}
+    </ul>
+  </div>
+  <div class="wrap site-footer__base">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.short_name }}, {{ site.department }}, {{ site.institution_short }}</p>
+  </div>
+</footer>

@@ -1,0 +1,17 @@
+---
+layout: page
+title: News
+lede: Papers, talks, awards and other updates from the lab.
+permalink: /news/
+---
+<ol class="news-list">
+  {% for item in site.data.news %}
+  <li class="news-item">
+    <time datetime="{{ item.date }}">{{ item.date | date: "%-d %B %Y" }}</time>
+    <div>
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.text }}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ol>

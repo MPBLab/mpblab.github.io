@@ -1,0 +1,49 @@
+# Lab members shown on the People page.
+#
+# To add someone, copy an entry and change the details.
+# photo: put the image in assets/img/people/ and write its file name here,
+#        e.g. photo: hafez.jpg   (leave empty to show initials instead)
+# links: any of email, scholar, researchgate, orcid, website (all optional)
+
+leader:
+  name: Prof. Dr. Md. Golam Hafez
+  initials: GH
+  role: Principal investigator
+  title: Professor, Department of Mathematics, CUET
+  photo: ""
+  bio: >-
+    Prof. Dr. Md. Golam Hafez is a Professor in the Department of Mathematics
+    at Chittagong University of Engineering & Technology (CUET), Bangladesh.
+    His research focuses on nonlinear wave dynamics in plasmas, including
+    ion-acoustic and positron-acoustic waves in relativistic and nonextensive
+    plasmas, studied through Burgers, Korteweg–de Vries and
+    Kadomtsev–Petviashvili type equations. He serves as a Review Editor for
+    the Mathematics of Computation and Data Science section of Frontiers in
+    Applied Mathematics and Statistics.
+  links:
+    email: ""
+    scholar: ""
+    researchgate: ""
+    orcid: ""
+
+# Groups appear in this order. A group with no members is hidden.
+groups:
+  - name: PhD students
+    members: []
+  - name: MPhil and MSc students
+    members: []
+  - name: Undergraduate students
+    members: []
+  - name: Alumni
+    members: []
+
+# Example member (copy into a group's members list above):
+#
+#    members:
+#      - name: Jane Doe
+#        initials: JD
+#        title: PhD student
+#        topic: Solitary waves in dusty plasmas
+#        photo: ""
+#        links:
+#          email: jane@example.com

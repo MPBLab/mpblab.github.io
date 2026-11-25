@@ -1,0 +1,17 @@
+# Publications shown on the Publications page, grouped by year (newest first).
+#
+# Add one entry per paper. Only "title", "authors" and "year" are required.
+# field: "physics" or "biology" (optional, sets the colour tag)
+#
+# Example:
+#
+# - title: "Ion-acoustic solitary waves in a relativistic plasma"
+#   authors: "A. Author, B. Author, M. G. Hafez"
+#   journal: "Journal Name"
+#   volume: "12"
+#   pages: "123–130"
+#   year: 2024
+#   doi: "10.xxxx/xxxxx"
+#   field: physics
+
+[]

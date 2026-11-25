@@ -1,0 +1,31 @@
+---
+layout: page
+title: Research
+lede: >-
+  Our work sits where nonlinear differential equations meet the physical and
+  living world. We build models, derive the equations that govern them, and
+  study their solutions.
+permalink: /research/
+---
+{% for area in site.data.research %}
+<section class="research-area area--{{ area.field }}" aria-labelledby="area-{{ forloop.index }}">
+  <div class="research-area__head">
+    <h2 id="area-{{ forloop.index }}">{{ area.name }}</h2>
+    <p>{{ area.summary }}</p>
+    {% if area.equation %}
+    <figure class="equation-figure">
+      <p class="equation">{{ area.equation }}</p>
+      <figcaption>{{ area.equation_name }}</figcaption>
+    </figure>
+    {% endif %}
+  </div>
+  <dl class="topics">
+    {% for t in area.topics %}
+    <div class="topic">
+      <dt>{{ t.name }}</dt>
+      <dd>{{ t.text }}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>
+{% endfor %}

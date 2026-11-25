@@ -1,0 +1,32 @@
+---
+layout: page
+title: People
+lede: The researchers and students who make up the lab.
+permalink: /people/
+---
+<section class="people-group" aria-labelledby="group-leader">
+  <h2 id="group-leader">Lab leader</h2>
+  {% include person.html person=site.data.people.leader large=true %}
+</section>
+
+{% assign shown = 0 %}
+{% for group in site.data.people.groups %}
+{% if group.members and group.members.size > 0 %}
+{% assign shown = shown | plus: 1 %}
+<section class="people-group" aria-labelledby="group-{{ forloop.index }}">
+  <h2 id="group-{{ forloop.index }}">{{ group.name }}</h2>
+  <div class="people-grid">
+    {% for m in group.members %}
+    {% include person.html person=m %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+
+{% if shown == 0 %}
+<section class="people-group">
+  <h2>Students and researchers</h2>
+  <p class="empty">Member profiles are being added. If you would like to work with us, see <a href="{{ '/join/' | relative_url }}">how to join the lab</a>.</p>
+</section>
+{% endif %}
