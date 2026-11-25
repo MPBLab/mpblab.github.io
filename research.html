@@ -8,7 +8,7 @@ lede: >-
 permalink: /research/
 ---
 {% for area in site.data.research %}
-<section class="research-area area--{{ area.field }}" aria-labelledby="area-{{ forloop.index }}">
+<section id="{{ area.field }}" class="research-area field--{{ area.field }}" aria-labelledby="area-{{ forloop.index }}">
   <div class="research-area__head">
     <h2 id="area-{{ forloop.index }}">{{ area.name }}</h2>
     <p>{{ area.summary }}</p>
