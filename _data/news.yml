@@ -5,6 +5,15 @@
 # For events, also add:  place: "Room 101, Department of Mathematics"
 # link: optional web address for more details
 
+- date: 2026-11-26
+  type: paper
+  title: 2026 publications added
+  text: >-
+    Eighteen papers published by lab members in 2026, on plasma waves,
+    evolution equations, mathematical epidemiology, relativistic astrophysics
+    and control, are now on the publications page.
+  link: /publications/
+
 - date: 2026-11-25
   type: news
   title: Lab website launched

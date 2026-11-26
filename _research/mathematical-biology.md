@@ -5,38 +5,36 @@ field: biology
 figure: lotka-volterra
 banner: orbits
 summary: >-
-  Differential-equation models of how populations grow and interact, and how
-  infectious diseases spread.
+  Differential-equation models of infectious diseases and living systems in
+  Bangladesh, including COVID-19, dengue and tuberculosis, and models of
+  neuron dynamics.
 ---
-{% comment %}
-  TODO (lab): please confirm or rewrite this page so it matches the lab's
-  actual work in mathematical biology.
-{% endcomment %}
 
-Living systems change over time: populations grow and compete, predators and
-prey rise and fall together, and infections spread through a community.
-Differential equations let us describe these changes precisely and predict
-how a system will behave.
+Living systems change over time: infections spread through a community,
+vaccination and treatment change their course, and cells such as neurons fire
+in complex rhythms. Differential equations let us describe these changes
+precisely, fit them to real data, and test what would happen under
+different interventions.
 
-## Population dynamics
+## What we study
 
-The classic Lotka–Volterra model describes prey $$x$$ and predators $$y$$:
-
-$$
-\frac{dx}{dt} = \alpha x - \beta x y, \qquad
-\frac{dy}{dt} = \delta x y - \gamma y .
-$$
-
-Prey grow on their own and are eaten by predators; predators grow by eating
-prey and die off without them. The two populations cycle around an
-equilibrium point (Figure 1).
-
-{% include figure.html svg="lotka-volterra" number=1 caption="Phase portrait of the Lotka–Volterra model with \(\alpha = \beta = \gamma = \delta = 1\). Each closed curve is one possible population cycle; arrows show the direction of time." class="field--biology" %}
+- **Infectious diseases in Bangladesh.** Models of COVID-19 (including double
+  vaccination and COVID-19 with lung cancer coinfection), dengue transmission
+  in urban and rural areas, and tuberculosis transmission with treatment
+  default and pseudo-recovery.
+- **Fractional and fractal-fractional models.** Models with memory, built with
+  operators such as the Caputo–Fabrizio derivative, analysed theoretically and
+  solved numerically against epidemiological data.
+- **Neuronal dynamics.** Fractal-fractional versions of the Hodgkin–Huxley
+  model for intrinsically bursting neurons.
+- **Thresholds and stability.** When an outbreak dies out or persists, and how
+  that depends on contact, recovery and treatment rates.
 
 ## Epidemic models
 
-In the SIR model, a population of size $$N$$ is split into susceptible ($$S$$),
-infected ($$I$$) and recovered ($$R$$) people:
+Most of our disease models extend the classic SIR model, in which a population
+of size $$N$$ is split into susceptible ($$S$$), infected ($$I$$) and recovered
+($$R$$) people:
 
 $$
 \frac{dS}{dt} = -\frac{\beta S I}{N}, \qquad
@@ -45,10 +43,20 @@ $$
 $$
 
 An outbreak grows when the basic reproduction number $$R_0 = \beta/\gamma$$
-is greater than one.
+is greater than one. Our models add further compartments, such as exposed,
+hospitalised or vaccinated people, and fit their parameters to data from
+Bangladesh.
 
-## Stability and bifurcation
+## Population dynamics
 
-For each model we ask when the system settles to a steady state, when it
-oscillates, and how its behaviour changes as parameters such as birth,
-contact or recovery rates are varied.
+The same tools describe interacting populations. In the Lotka–Volterra model
+of prey $$x$$ and predators $$y$$,
+
+$$
+\frac{dx}{dt} = \alpha x - \beta x y, \qquad
+\frac{dy}{dt} = \delta x y - \gamma y ,
+$$
+
+the two populations cycle around an equilibrium point (Figure 1).
+
+{% include figure.html svg="lotka-volterra" number=1 caption="Phase portrait of the Lotka–Volterra model with \(\alpha = \beta = \gamma = \delta = 1\). Each closed curve is one possible population cycle; arrows show the direction of time." class="field--biology" %}

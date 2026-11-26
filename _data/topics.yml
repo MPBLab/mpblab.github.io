@@ -11,3 +11,9 @@
 - id: mathematical-biology
   name: Mathematical biology
   field: biology
+- id: relativistic-astrophysics
+  name: Relativistic astrophysics
+  field: physics
+- id: control-systems
+  name: Control and machine learning
+  field: other

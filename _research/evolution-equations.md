@@ -51,6 +51,10 @@ The smaller the dissipation $$C$$, the steeper the shock (Figure 1).
 
 {% include figure.html svg="burgers-shocks" number=1 caption="Shock profiles of the Burgers equation joining \(u_L = 1\) to \(u_R = 0\), for four values of the dissipation coefficient \(\nu = C\). Smaller dissipation gives a steeper shock." %}
 
+Beyond these, we study systems such as the (3 + 1)-dimensional
+Davey–Stewartson system and fractional evolution equations, combining
+dynamical-systems analysis with exact solitary-wave solutions.
+
 ## Methods
 
 - Reductive perturbation methods for deriving the equations

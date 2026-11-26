@@ -4,9 +4,9 @@
   <p class="pub__title">
     {% if p.doi %}<a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% elsif p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
   </p>
-  <p class="pub__authors">{{ p.authors }}</p>
+  <p class="pub__authors">{{ p.authors | replace: "Md. Golam Hafez", "<b>Md. Golam Hafez</b>" | replace: "M. G. Hafez", "<b>M. G. Hafez</b>" }}</p>
   <p class="pub__venue">
-    {% if p.journal %}<cite>{{ p.journal }}</cite>{% endif %}{% if p.volume %} <b>{{ p.volume }}</b>{% endif %}{% if p.issue %}({{ p.issue }}){% endif %}{% if p.pages %}, {{ p.pages }}{% endif %} ({{ p.year }}){% if p.type and p.type != "journal" %}, {{ p.type }}{% endif %}
+    {% if p.journal %}<cite>{{ p.journal }}</cite>{% endif %}{% if p.volume %} <b>{{ p.volume }}</b>{% endif %}{% if p.issue %}({{ p.issue }}){% endif %}{% if p.pages %}, {{ p.pages }}{% elsif p.article %}, {{ p.article }}{% endif %} ({{ p.year }}){% if p.type and p.type != "journal" %}, {{ p.type }}{% endif %}
     {% if t %}<span class="tag">{{ t.name }}</span>{% endif %}
   </p>
 </li>

@@ -18,7 +18,10 @@ When dissipation is important, the wave can instead form a **shock**.
 ## What we study
 
 - Ion-acoustic and positron-acoustic solitary waves and shock waves
-- Plasmas with relativistic particles and with nonextensive (non-Maxwellian) electron distributions
+- Waves in the upper ionosphere of Venus, including shock, anti-shock, periodic and super-periodic structures
+- Dust-acoustic waves in dusty plasmas, including strongly coupled plasmas with ion-drag force
+- Collisions of multi-solitons, lump waves and rogue waves, in planar, cylindrical and spherical geometry
+- Plasmas with relativistic particles and with nonextensive or (r,q)-distributed electrons
 - How the amplitude, width and speed of a wave depend on the plasma's composition and temperature
 
 ## From plasma model to wave equation

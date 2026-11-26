@@ -1,9 +1,10 @@
 # Publications shown on the Publications page, newest year first.
 #
 # Required: title, authors, year
-# Optional: journal, volume, issue, pages, doi, url, type, topic
+# Optional: journal, volume, issue, pages (or article for an article number),
+#           date (YYYY-MM-DD, used to order papers within a year), doi, url, type, topic
 #   type:  journal, conference, book, chapter, thesis   (default: journal)
-#   topic: plasma-waves, evolution-equations, mathematical-biology
+#   topic: one of the ids in _data/topics.yml
 #          (the paper then also appears on that research page)
 #
 # Example:
@@ -18,4 +19,217 @@
 #   type: journal
 #   topic: plasma-waves
 
-[]
+# ---------- 2026 (checked against Crossref and OpenAlex) ----------
+
+- title: "Cylindrical and spherical propagation of ion-acoustic overtaking multi-wave structures in the upper ionosphere of Venus"
+  authors: "Md. Aminul Islam, Tokey Sifullah Tanjil, Md. Golam Hafez"
+  journal: "Advances in Space Research"
+  volume: "78"
+  issue: "11"
+  pages: "10819–10834"
+  year: 2026
+  date: "2026-12-01"
+  doi: "10.1016/j.asr.2026.09.001"
+  type: "journal"
+  topic: "plasma-waves"
+
+- title: "Fractal-fractional analysis of COVID-19 double vaccination in Bangladesh: Theoretical and numerical insights from epidemiological data"
+  authors: "Md. Jahidul Islam, Md. Mamun Sarkar, Md. Golam Hafez, Md. Joynul Abedin, Amanul Hoque"
+  journal: "PLOS One"
+  volume: "21"
+  issue: "11"
+  pages: "e0362086"
+  year: 2026
+  date: "2026-11-25"
+  doi: "10.1371/journal.pone.0362086"
+  type: "journal"
+  topic: "mathematical-biology"
+
+- title: "A Mathematical Model for COVID‐19 Severity and Lung Cancer Coinfection: Analysis of Threshold Behavior"
+  authors: "M. T. H. Rayhan, M. J. Islam, M. G. Hafez"
+  journal: "International Journal of Differential Equations"
+  volume: "2026"
+  issue: "1"
+  article: "3733368"
+  year: 2026
+  date: "2026-11-01"
+  doi: "10.1155/ijde/3733368"
+  type: "journal"
+  topic: "mathematical-biology"
+
+- title: "Mathematical Model for Dengue Transmission: A Comparative Study from the Perspective of Urban and Rural Areas in Bangladesh"
+  authors: "Tokey Sifullah Tanjil, Shahrina Akter, Md. Golam Hafez"
+  journal: "AIUB Journal of Science and Engineering (AJSE)"
+  volume: "25"
+  issue: "2"
+  pages: "199–212"
+  year: 2026
+  date: "2026-10-30"
+  doi: "10.53799/4hgatn90"
+  type: "journal"
+  topic: "mathematical-biology"
+
+- title: "Head-on collisions of multi-solitons and lump waves in a dusty plasma with (r,q)-distributed electrons"
+  authors: "Salena Akther, Md. Golam Hafez"
+  journal: "High Energy Density Physics"
+  volume: "60"
+  pages: "101295"
+  year: 2026
+  date: "2026-09-01"
+  doi: "10.1016/j.hedp.2026.101295"
+  type: "journal"
+  topic: "plasma-waves"
+
+- title: "Deep neural networks based neural Lyapunov control design for stability of variable fractional-order systems"
+  authors: "Sayed Allamah Iqbal, Md. Golam Hafez, Rathinasamy Sakthivel, Shanmugam Harshavarthini, Asaduzzaman"
+  journal: "International Journal of Systems Science"
+  pages: "1–24"
+  year: 2026
+  date: "2026-08-05"
+  doi: "10.1080/00207721.2026.2711942"
+  type: "journal"
+  topic: "control-systems"
+
+- title: "Interacting dust-acoustic multi-soliton and periodic waves in strongly coupled dusty plasma with ion-drag force"
+  authors: "Shahrina Akter, Tokey Sifullah Tanjil, Md. Golam Hafez"
+  journal: "Scientific Reports"
+  volume: "16"
+  issue: "1"
+  article: "28115"
+  year: 2026
+  date: "2026-06-19"
+  doi: "10.1038/s41598-026-57659-z"
+  type: "journal"
+  topic: "plasma-waves"
+
+- title: "Incorporating Deep Neural Networks with LMI Constraints for Nonlinear Model Predictive Control Optimization"
+  authors: "Sayed Allamah Iqbal, Md. Golam Hafez, Asaduzzaman"
+  journal: "Mathematical Methods in the Applied Sciences"
+  volume: "49"
+  issue: "13"
+  pages: "14844–14868"
+  year: 2026
+  date: "2026-05-25"
+  doi: "10.1002/mma.70811"
+  type: "journal"
+  topic: "control-systems"
+
+- title: "Tidal love numbers, deformability and universal relations of an analytic gravastar-like compact object model"
+  authors: "M. I. H. Sakib, Wenxin Wang, Xiande Wu, M. G. Hafez, M. A. Kauser"
+  journal: "International Journal of Modern Physics D"
+  volume: "35"
+  issue: "08"
+  article: "2650021"
+  year: 2026
+  date: "2026-05-23"
+  doi: "10.1142/s0218271826500215"
+  type: "journal"
+  topic: "relativistic-astrophysics"
+
+- title: "A slowly-rotating extension of the Tolman: IV. Solution: a Hartle–Thorne approach"
+  authors: "M. I. H. Sakib, Wenxin Wang, Xiande Wu, M. G. Hafez, M. A. Kauser"
+  journal: "Classical and Quantum Gravity"
+  volume: "43"
+  issue: "9"
+  pages: "095005"
+  year: 2026
+  date: "2026-05-04"
+  doi: "10.1088/1361-6382/ae600e"
+  type: "journal"
+  topic: "relativistic-astrophysics"
+
+- title: "Relativistic formulation and physical viability of anisotropic analytic gravastars"
+  authors: "M. I. H. Sakib, Wenxin Wang, Xiande Wu, M. G. Hafez, M. A. Kauser"
+  journal: "The European Physical Journal C"
+  volume: "86"
+  issue: "3"
+  article: "310"
+  year: 2026
+  date: "2026-03-26"
+  doi: "10.1140/epjc/s10052-026-15465-x"
+  type: "journal"
+  topic: "relativistic-astrophysics"
+
+- title: "Analyzing Tuberculosis Transmission in Bangladesh: Modified SEIHR Framework With Non‐Monotone Incidence, Pseudo‐Recovery, and Treatment Default Mechanisms"
+  authors: "Fahmida Akter Prema, Md. Jahidul Islam, Md. Golam Hafez"
+  journal: "Mathematical Methods in the Applied Sciences"
+  volume: "49"
+  issue: "10"
+  pages: "10566–10587"
+  year: 2026
+  date: "2026-02-20"
+  doi: "10.1002/mma.70612"
+  type: "journal"
+  topic: "mathematical-biology"
+
+- title: "Nonlinear wave phenomena in Venus' ionosphere: Shock, anti-shock, periodic, and super-periodic structures near critical thresholds"
+  authors: "Parvin Akter, Sagar Barua, M. G. Hafez"
+  journal: "Physics of Plasmas"
+  volume: "33"
+  issue: "2"
+  article: "022304"
+  year: 2026
+  date: "2026-02-20"
+  doi: "10.1063/5.0293800"
+  type: "journal"
+  topic: "plasma-waves"
+
+- title: "A unified analytical equation of state for compact stars: Bridging neutron stars and gravastars with the Imran-class model"
+  authors: "M. I. H. Sakib, Wenxin Wang, Xiande Wu, M. A. Kauser, M. G. Hafez"
+  journal: "International Journal of Modern Physics D"
+  volume: "35"
+  issue: "04"
+  article: "2650004"
+  year: 2026
+  date: "2026-02-16"
+  doi: "10.1142/s0218271826500045"
+  type: "journal"
+  topic: "relativistic-astrophysics"
+
+- title: "Propagation and interaction of ion-acoustic single, N-solitons, and periodic waves in Venus’ upper ionosphere"
+  authors: "Shahrina Akter, Tokey Sifullah Tanjil, Md. Golam Hafez"
+  journal: "Advances in Space Research"
+  volume: "77"
+  issue: "4"
+  pages: "5236–5253"
+  year: 2026
+  date: "2026-02-01"
+  doi: "10.1016/j.asr.2025.12.043"
+  type: "journal"
+  topic: "plasma-waves"
+
+- title: "Neuronal Dynamics of an Intrinsically Bursting Neuron Through the Caputo–Fabrizio Fractal–Fractional Hodgkin–Huxley Model"
+  authors: "M. J. Islam, M. J. Abedin, A. Hoque, M. G. Hafez"
+  journal: "International Journal of Differential Equations"
+  volume: "2026"
+  issue: "1"
+  article: "7948776"
+  year: 2026
+  date: "2026-01-19"
+  doi: "10.1155/ijde/7948776"
+  type: "journal"
+  topic: "mathematical-biology"
+
+- title: "Dynamical analysis and exact solitary wave solutions of a (3 + 1)-dimensional Davey–Stewartson system with parabolic law nonlinearity"
+  authors: "T. A. Min, M. G. Hafez, S. Akther"
+  journal: "AIP Advances"
+  volume: "16"
+  issue: "1"
+  article: "015211"
+  year: 2026
+  date: "2026-01-13"
+  doi: "10.1063/5.0306625"
+  type: "journal"
+  topic: "evolution-equations"
+
+- title: "Propagation of oblique overtaking multi-soliton and lump soliton through time and space fractional nonlinear evolution equation in relativistic, rotating magnetized multi-species plasmas"
+  authors: "Salena Akther, Md. Golam Hafez"
+  journal: "Indian Journal of Physics"
+  volume: "100"
+  issue: "3"
+  pages: "1231–1246"
+  year: 2026
+  date: "2025-10-25"
+  doi: "10.1007/s12648-025-03846-z"
+  type: "journal"
+  topic: "plasma-waves"
