@@ -124,6 +124,16 @@
   search.addEventListener("input", apply);
 
   // Links such as /publications/?q=Tanjil open the page already filtered
-  var q = new URLSearchParams(window.location.search).get("q");
-  if (q) { search.value = q; apply(); }
+  var params = new URLSearchParams(window.location.search);
+  var q = params.get("q");
+  if (q) search.value = q;
+  var tq = params.get("topic");
+  if (tq) {
+    buttons.forEach(function (o) {
+      var on = o.getAttribute("data-topic") === tq;
+      o.setAttribute("aria-pressed", on ? "true" : "false");
+      if (on) topic = tq;
+    });
+  }
+  if (q || tq) apply();
 })();

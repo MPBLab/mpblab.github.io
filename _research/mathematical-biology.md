@@ -8,6 +8,13 @@ summary: >-
   Differential-equation models of infectious diseases and living systems in
   Bangladesh, including COVID-19, dengue and tuberculosis, and models of
   neuron dynamics.
+equation: '\frac{dI}{dt} = \frac{\beta S I}{N} - \gamma I, \qquad R_0 = \frac{\beta}{\gamma}'
+equation_name: Infected class of the SIR epidemic model
+points:
+  - COVID-19, dengue and tuberculosis transmission in Bangladesh
+  - Fractional and fractal-fractional models fitted to data
+  - Neuronal dynamics with Hodgkin–Huxley type models
+  - Thresholds, stability and the effect of interventions
 ---
 
 Living systems change over time: infections spread through a community,

@@ -196,7 +196,7 @@ Then open <http://localhost:4000>.
 - Logo: designed by the lab. Files are in `assets/img/logo/` (header emblem, full logo, icons); `assets/img/logo.png` and `assets/img/share.jpg` are the versions used by search engines and link previews.
 - Wordmark font: Montserrat, SIL Open Font License (`assets/fonts/OFL-Montserrat.txt`).
 
-- Typeface: Computer Modern Unicode (CMU), SIL Open Font License (`assets/fonts/OFL.txt`).
+- Typeface: TeX Gyre Pagella (Palatino-style), GUST Font License (`assets/fonts/LICENSE-TeX-Gyre-Pagella.txt`).
 - Equations: [KaTeX](https://katex.org), MIT License (`assets/vendor/katex/LICENSE`).
 - Figures are generated from exact solutions of the KdV and Burgers equations
   and numerical solutions of the Lotka–Volterra model.

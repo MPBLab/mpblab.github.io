@@ -6,6 +6,13 @@ figure: kdv-solitons
 summary: >-
   How solitary waves and shock waves form and travel in plasmas, including
   relativistic and nonextensive plasmas found in space and astrophysical settings.
+equation: '\phi(\xi,\tau) = \phi_m \sech^2\!\left(\frac{\xi - U_0\tau}{W}\right)'
+equation_name: Solitary-wave solution of the Korteweg–de Vries equation
+points:
+  - Ion-acoustic, positron-acoustic and dust-acoustic solitary and shock waves
+  - Waves in the upper ionosphere of Venus
+  - Collisions of multi-solitons, lump waves and rogue waves
+  - Relativistic plasmas and nonextensive or (r,q)-distributed electrons
 ---
 
 A plasma is a gas in which many atoms have lost electrons, leaving a mixture

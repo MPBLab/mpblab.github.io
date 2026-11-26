@@ -6,6 +6,12 @@ figure: burgers-shocks
 summary: >-
   Deriving Burgers, Korteweg–de Vries and Kadomtsev–Petviashvili type
   equations from physical models, and finding their wave solutions.
+equation: 'u_t + A\,u\,u_x + B\,u_{xxx} = C\,u_{xx}'
+equation_name: Korteweg–de Vries–Burgers equation
+points:
+  - Deriving Burgers, KdV and Kadomtsev–Petviashvili type equations
+  - Exact travelling-wave, soliton and shock solutions
+  - Fractional evolution equations and higher-dimensional systems such as Davey–Stewartson
 ---
 
 Many different physical systems reduce, in the right limit, to a small family

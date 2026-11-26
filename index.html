@@ -26,7 +26,7 @@ layout: default
       {% assign areas = site.research | sort: "order" %}
       {% for a in areas %}
       <article class="card field--{{ a.field }}">
-        {% if a.figure %}<a class="card__figure" href="{{ a.url | relative_url }}" tabindex="-1" aria-hidden="true">{% include figures/{{ a.figure }}.svg %}</a>{% endif %}
+        <a class="card__figure" href="{{ a.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ '/assets/img/pubs/topic-' | append: a.slug | append: '.webp' | relative_url }}" alt="" width="800" height="500" loading="lazy"></a>
         <div class="card__body">
           <h3 class="card__title"><a href="{{ a.url | relative_url }}">{{ a.title }}</a></h3>
           <p>{{ a.summary }}</p>
