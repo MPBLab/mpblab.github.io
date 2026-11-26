@@ -3,6 +3,7 @@ title: Mathematical biology
 order: 3
 field: biology
 figure: lotka-volterra
+banner: orbits
 summary: >-
   Differential-equation models of how populations grow and interact, and how
   infectious diseases spread.

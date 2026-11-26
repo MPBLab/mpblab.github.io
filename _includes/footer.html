@@ -1,21 +1,29 @@
 <footer class="site-footer">
-  <div class="site-footer__cols">
+  <div class="container site-footer__cols">
     <div>
       <p class="site-footer__name">{{ site.title }}</p>
       <p>Led by <a href="{{ site.leader_page | relative_url }}">{{ site.leader }}</a></p>
     </div>
-    <address>
-      {% for line in site.address %}{{ line }}<br>{% endfor %}
-      {% if site.email != "" %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
-    </address>
-    <ul class="site-footer__links">
-      <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
-      <li><a href="{{ '/join/' | relative_url }}">Join us</a></li>
-      {% if site.links.google_scholar != "" %}<li><a href="{{ site.links.google_scholar }}">Google Scholar</a></li>{% endif %}
-      {% if site.links.researchgate != "" %}<li><a href="{{ site.links.researchgate }}">ResearchGate</a></li>{% endif %}
-      {% if site.links.orcid != "" %}<li><a href="{{ site.links.orcid }}">ORCID</a></li>{% endif %}
-      {% if site.links.github != "" %}<li><a href="{{ site.links.github }}">GitHub</a></li>{% endif %}
-    </ul>
+    <div>
+      <p class="site-footer__head">Address</p>
+      <address>
+        {% for line in site.address %}{{ line }}<br>{% endfor %}
+        {% if site.email != "" %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
+      </address>
+    </div>
+    <div>
+      <p class="site-footer__head">Links</p>
+      <ul class="site-footer__links">
+        <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+        <li><a href="{{ '/join/' | relative_url }}">Join us</a></li>
+        {% if site.links.google_scholar != "" %}<li><a href="{{ site.links.google_scholar }}">Google Scholar</a></li>{% endif %}
+        {% if site.links.researchgate != "" %}<li><a href="{{ site.links.researchgate }}">ResearchGate</a></li>{% endif %}
+        {% if site.links.orcid != "" %}<li><a href="{{ site.links.orcid }}">ORCID</a></li>{% endif %}
+        {% if site.links.github != "" %}<li><a href="{{ site.links.github }}">GitHub</a></li>{% endif %}
+      </ul>
+    </div>
   </div>
-  <p class="site-footer__base">&copy; {{ site.time | date: "%Y" }} {{ site.short_name }}, {{ site.department }}, {{ site.institution_short }}. Last updated {{ site.time | date: "%-d %B %Y" }}.</p>
+  <div class="container site-footer__base">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.short_name }}, {{ site.department }}, {{ site.institution_short }}. Last updated {{ site.time | date: "%-d %B %Y" }}.</p>
+  </div>
 </footer>

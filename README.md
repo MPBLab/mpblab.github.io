@@ -33,6 +33,7 @@ top showing the format.
 | To… | Edit |
 |---|---|
 | Change the lab email, address or Google Scholar / ResearchGate / ORCID links | `_config.yml` |
+| Change the banner background (waves, plasma, orbits, contours) | `_config.yml`, the `banner:` line (or `banner:` at the top of a single page) |
 | Add a student or alumnus | `_data/people.yml` |
 | Update Prof. Hafez's profile (positions, education, awards) | `_data/people.yml`, `leader` section |
 | Add a paper | `_data/publications.yml` |

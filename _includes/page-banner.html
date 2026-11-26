@@ -1,0 +1,10 @@
+{% assign bg = page.banner | default: site.banner | default: "waves" %}
+<section class="page-banner banner bg-{{ bg }}">
+  <div class="container">
+    {% if include.crumb_url %}
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ include.crumb_url | relative_url }}">{{ include.crumb_title }}</a></nav>
+    {% endif %}
+    <h1>{{ include.title | default: page.title }}</h1>
+    {% if include.lede %}<p class="banner__lede">{{ include.lede }}</p>{% endif %}
+  </div>
+</section>

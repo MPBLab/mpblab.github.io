@@ -1,56 +1,86 @@
 ---
 layout: default
-math: true
 ---
-<header>
-  <h1 class="paper__title">Mathematical Physics &amp; Biology Research Lab</h1>
-  <p class="paper__author"><a href="{{ site.leader_page | relative_url }}">{{ site.leader }}</a></p>
-  <p class="paper__affil">{{ site.department }}, {{ site.institution }}, Bangladesh</p>
-</header>
-
-<section class="abstract" aria-labelledby="abstract-heading">
-  <h2 id="abstract-heading">Abstract</h2>
-  <p>
-    We study nonlinear waves in plasmas and mathematical models of living
-    systems. Our work derives the equations that govern ion-acoustic and
-    positron-acoustic waves, finds their solitary-wave and shock solutions,
-    and applies the same mathematical tools to the dynamics of populations
-    and disease.
-  </p>
+{% assign bg = page.banner | default: site.banner | default: "waves" %}
+{% assign leader = site.data.people.leader %}
+<section class="hero banner bg-{{ bg }}">
+  <div class="container hero__inner">
+    <h1 class="hero__title">Mathematical Physics &amp; Biology Research Lab</h1>
+    <p class="hero__affil">{{ site.department }}, {{ site.institution }}</p>
+    <p class="hero__text">
+      We study nonlinear waves in plasmas and mathematical models of living
+      systems: we derive the equations behind them, solve them, and ask what
+      the solutions tell us about the real world.
+    </p>
+    <p class="hero__actions">
+      <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">Explore our research</a>
+      <a class="btn btn--outline" href="{{ '/join/' | relative_url }}">Join the lab</a>
+    </p>
+  </div>
 </section>
 
-{% include figure.html svg="kdv-solitons" number=1 caption="Two solitons of the Korteweg–de Vries equation \(u_t + 6uu_x + u_{xxx} = 0\). The taller soliton is faster: it overtakes the smaller one, and both leave the collision with their shapes unchanged." %}
-
-<div class="numbered">
-  <section aria-labelledby="sec-research">
-    <h2 id="sec-research">Research</h2>
-    <ul class="areas">
+<section class="section" aria-labelledby="areas-heading">
+  <div class="container">
+    <h2 id="areas-heading" class="section__title">Research areas</h2>
+    <div class="cards">
       {% assign areas = site.research | sort: "order" %}
       {% for a in areas %}
-      <li class="area field--{{ a.field }}">
-        <p class="area__name"><a href="{{ a.url | relative_url }}">{{ a.title }}</a></p>
-        <p class="area__text">{{ a.summary }}</p>
-      </li>
+      <article class="card field--{{ a.field }}">
+        {% if a.figure %}<a class="card__figure" href="{{ a.url | relative_url }}" tabindex="-1" aria-hidden="true">{% include figures/{{ a.figure }}.svg %}</a>{% endif %}
+        <div class="card__body">
+          <h3 class="card__title"><a href="{{ a.url | relative_url }}">{{ a.title }}</a></h3>
+          <p>{{ a.summary }}</p>
+        </div>
+      </article>
       {% endfor %}
-    </ul>
-    <p class="more"><a href="{{ '/research/' | relative_url }}">Read about our research</a></p>
-  </section>
+    </div>
+  </div>
+</section>
 
-  <section aria-labelledby="sec-news">
-    <h2 id="sec-news">News and events</h2>
-    <ol class="news-list">
-      {% for item in site.data.news limit:3 %}{% include news-item.html item=item %}{% endfor %}
-    </ol>
-    <p class="more"><a href="{{ '/news/' | relative_url }}">All news and events</a></p>
-  </section>
+<section class="section section--alt" aria-labelledby="leader-heading">
+  <div class="container split">
+    <div>
+      <h2 class="section__title">About the lab</h2>
+      <p>
+        The MPB Lab is a research group in the {{ site.department }} at
+        {{ site.institution_short }}, Chattogram, Bangladesh. We work on nonlinear
+        partial differential equations and their applications, and we train
+        undergraduate and postgraduate students in mathematical modelling,
+        analysis and scientific computing.
+      </p>
+      <p><a class="link-strong" href="{{ '/about/' | relative_url }}">More about the lab</a></p>
+    </div>
+    <div class="leader-card">
+      <h2 id="leader-heading" class="leader-card__label">Lab leader</h2>
+      <div class="leader-card__row">
+        {% if leader.photo and leader.photo != "" %}
+        <img class="leader-card__photo" src="{{ '/assets/img/people/' | append: leader.photo | relative_url }}" alt="Photo of {{ leader.name }}">
+        {% else %}
+        <div class="leader-card__photo leader-card__photo--initials" aria-hidden="true">{{ leader.initials }}</div>
+        {% endif %}
+        <div>
+          <p class="leader-card__name"><a href="{{ site.leader_page | relative_url }}">{{ leader.name }}</a></p>
+          <p class="leader-card__title">{{ leader.title }}</p>
+          <p class="leader-card__summary">{{ leader.summary }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section aria-labelledby="sec-join">
-    <h2 id="sec-join">Join the lab</h2>
-    <p>
-      We welcome undergraduate, MSc, MPhil and PhD students who enjoy
-      differential equations and want to apply them to problems in physics
-      and biology.
-    </p>
-    <p><a href="{{ '/join/' | relative_url }}">How to join the lab</a></p>
-  </section>
-</div>
+<section class="section" aria-labelledby="news-heading">
+  <div class="container split split--news">
+    <div>
+      <h2 id="news-heading" class="section__title">News and events</h2>
+      <ol class="news-list">
+        {% for item in site.data.news limit:4 %}{% include news-item.html item=item %}{% endfor %}
+      </ol>
+      <p><a class="link-strong" href="{{ '/news/' | relative_url }}">All news and events</a></p>
+    </div>
+    <aside class="join-box" aria-labelledby="join-heading">
+      <h2 id="join-heading">Study with us</h2>
+      <p>We welcome undergraduate, MSc, MPhil and PhD students who enjoy differential equations and want to apply them to physics and biology.</p>
+      <a class="btn btn--primary" href="{{ '/join/' | relative_url }}">How to join</a>
+    </aside>
+  </div>
+</section>

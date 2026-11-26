@@ -1,16 +1,16 @@
 ---
-layout: default
+layout: page
 title: Prof. Dr. Md. Golam Hafez
 description: >-
   Prof. Dr. Md. Golam Hafez, Professor of Mathematics at CUET and leader of the
   Mathematical Physics & Biology Research Lab.
+lede: Professor, Department of Mathematics, CUET. Leader of the MPB Lab.
+parent:
+  title: People
+  url: /people/
 permalink: /people/hafez/
 ---
 {% assign p = site.data.people.leader %}
-<header class="page-head">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/people/' | relative_url }}">People</a></nav>
-</header>
-
 <div class="profile">
   {% if p.photo and p.photo != "" %}
   <img class="profile__photo" src="{{ '/assets/img/people/' | append: p.photo | relative_url }}" alt="Photo of {{ p.name }}">
@@ -18,8 +18,7 @@ permalink: /people/hafez/
   <div class="profile__photo profile__photo--initials" aria-hidden="true">{{ p.initials }}</div>
   {% endif %}
   <div>
-    <h1>{{ p.name }}</h1>
-    <p class="profile__title">{{ p.title }}<br>{{ p.role }}, {{ site.short_name }}</p>
+    <h2 class="profile__heading">Biography</h2>
     <p>{{ p.bio }}</p>
     {% assign l = p.links %}
     <ul class="inline-links">
@@ -31,6 +30,7 @@ permalink: /people/hafez/
   </div>
 </div>
 
+<div class="profile-sections">
 {% if p.interests.size > 0 %}
 <section aria-labelledby="h-interests">
   <h2 id="h-interests">Research interests</h2>
@@ -76,3 +76,4 @@ permalink: /people/hafez/
   <p class="empty">The publication list is being prepared.</p>
   {% endif %}
 </section>
+</div>

@@ -20,6 +20,11 @@ address:
   - "Chittagong University of Engineering & Technology (CUET)"
   - "Chattogram 4349, Bangladesh"
 
+# Banner background shown at the top of every page.
+# Choose one of: waves, plasma, orbits, contours
+# (a single page can use a different one with  banner: plasma  in its front matter)
+banner: waves
+
 # Contact email for the lab. Leave empty ("") to hide it on the site.
 email: ""
 

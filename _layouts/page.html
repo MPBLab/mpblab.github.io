@@ -1,15 +1,7 @@
 ---
 layout: default
 ---
-<header class="page-head">
-  {% if page.parent %}
-  <nav class="crumbs" aria-label="Breadcrumb">
-    <a href="{{ page.parent.url | relative_url }}">{{ page.parent.title }}</a>
-  </nav>
-  {% endif %}
-  <h1>{{ page.title }}</h1>
-  {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
-</header>
-<div class="page-body">
+{% include page-banner.html lede=page.lede crumb_url=page.parent.url crumb_title=page.parent.title %}
+<div class="container page-body">
   {{ content }}
 </div>
