@@ -14,7 +14,7 @@ layout: default
     </p>
     <p class="hero__actions">
       <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">Explore our research</a>
-      <a class="btn btn--outline" href="{{ '/join/' | relative_url }}">Join the lab</a>
+      <a class="btn btn--outline" href="{{ '/publications/' | relative_url }}">See our publications</a>
     </p>
   </div>
 </section>
@@ -82,18 +82,13 @@ layout: default
 </section>
 
 <section class="section" aria-labelledby="news-heading">
-  <div class="container split split--news">
-    <div>
+  <div class="container">
+    <div class="news-block">
       <h2 id="news-heading" class="section__title">News and events</h2>
       <ol class="news-list">
         {% for item in site.data.news limit:4 %}{% include news-item.html item=item %}{% endfor %}
       </ol>
       <p><a class="link-strong" href="{{ '/news/' | relative_url }}">All news and events</a></p>
     </div>
-    <aside class="join-box" aria-labelledby="join-heading">
-      <h2 id="join-heading">Study with us</h2>
-      <p>We welcome undergraduate, MSc, MPhil and PhD students who enjoy differential equations and want to apply them to physics and biology.</p>
-      <a class="btn btn--primary" href="{{ '/join/' | relative_url }}">How to join</a>
-    </aside>
   </div>
 </section>

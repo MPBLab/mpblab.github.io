@@ -279,6 +279,7 @@ a:hover { text-decoration: underline; text-underline-offset: 0.18em; }
 
 /* News */
 .news-list { list-style: none; margin: 0 0 1.25rem; padding: 0; }
+.news-block { max-width: 52rem; }
 .news-item { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0.2rem 1.5rem; padding: 0.9rem 0; border-top: 1px solid var(--rule); }
 .news-item:last-child { border-bottom: 1px solid var(--rule); }
 .news-item time { font-family: var(--sans); font-size: 0.95rem; color: var(--muted); padding-top: 0.2rem; }

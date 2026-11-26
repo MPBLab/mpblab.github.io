@@ -21,8 +21,6 @@ minute or two.
 | Lab leader profile | `/people/hafez/` | `_data/people.yml` (the `leader` section) |
 | Publications | `/publications/` | `_data/publications.yml` |
 | News and events | `/news/` | `_data/news.yml` |
-| Join us | `/join/` | `join.html` |
-| Contact | `/contact/` | `_config.yml` (address and email) |
 
 ## How to update the website
 

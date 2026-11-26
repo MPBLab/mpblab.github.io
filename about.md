@@ -38,6 +38,6 @@ Our work falls into three connected areas:
 
 The lab is part of the {{ site.department }} at
 {{ site.institution }}, Chattogram, Bangladesh.
-See the [contact page]({{ '/contact/' | relative_url }}) for our address.
+Address: {{ site.address | join: ', ' }}.
 
 </div>
