@@ -131,9 +131,22 @@ JPG under 300 KB. The site shows it as a circle.
 The photo then appears on the Members page and beside the person's name on
 every publication card.
 
-**Role and introduction:** in the same entry, fill in `role`
-(e.g. `"PhD student"`), `intro` (two or three sentences) and optional `links`.
-To move someone between "Lab members" and "Collaborators", change `group`.
+**Role and introduction:** in the same entry fill in `status` and the fields
+below it, plus `intro` (two or three sentences) and optional `links`. The line
+under the name is written automatically:
+
+| status | Fill in | Shown as |
+|---|---|---|
+| `phd`, `mphil`, `msc`, `bsc` | `year` (started), `department` | MSc student (since 2024)<br>Department of Mathematics, CUET |
+| `faculty` | `position`, `department` | Assistant Professor<br>Department of Mathematics, CUET |
+| `postdoc` | `department` | Postdoctoral researcher<br>Department of Mathematics, CUET |
+| `alumni` | `degree`, `year` (graduated), `position` (current job) | MSc graduate, 2024<br>Now: Lecturer, XYZ University |
+| (collaborators) | `position` | Professor<br>Bharathiar University, India |
+
+The Members page groups people by status: Faculty members, Postdoctoral
+researchers, PhD, MPhil, MSc and Undergraduate students, Lab members (status
+not filled in yet), Alumni and Collaborators. To move someone between lab
+members and collaborators, change `group`.
 
 **New co-authors:** when a new paper has an author who is not yet listed, add
 an entry to `members.yml` with that name (exactly as written in

@@ -1,0 +1,30 @@
+{% comment %}
+  The lines under a member's name, written from their status fields:
+    faculty   ->  Assistant Professor / Department of Mathematics, CUET
+    phd ...   ->  PhD student (since 2024) / Department of Mathematics, CUET
+    alumni    ->  MSc graduate, 2024 / Now: Lecturer, XYZ University
+    postdoc   ->  Postdoctoral researcher / Department ..., CUET
+  Collaborators and people without a status show their position (if any)
+  and university.
+{% endcomment %}
+{% assign m = include.m %}
+{% assign st = m.status | default: "" | downcase %}
+{% capture where %}{% if m.department and m.department != "" %}{{ m.department }}{% if m.affiliation and m.affiliation != "" %}, {% endif %}{% endif %}{{ m.affiliation }}{% endcapture %}
+{% case st %}
+  {% when "faculty" %}
+    {% assign role = m.position | default: "Faculty member" %}{% assign line2 = where %}
+  {% when "postdoc" %}
+    {% assign role = "Postdoctoral researcher" %}{% assign line2 = where %}
+  {% when "phd" or "mphil" or "msc" or "bsc" %}
+    {% assign deg = st | replace: "phd", "PhD" | replace: "mphil", "MPhil" | replace: "msc", "MSc" | replace: "bsc", "BSc" %}
+    {% capture role %}{{ deg }} student{% if m.year and m.year != "" %} (since {{ m.year }}){% endif %}{% endcapture %}{% assign line2 = where %}
+  {% when "alumni" %}
+    {% capture role %}{% if m.degree and m.degree != "" %}{{ m.degree }} graduate{% else %}Former member{% endif %}{% if m.year and m.year != "" %}, {{ m.year }}{% endif %}{% endcapture %}
+    {% if m.position and m.position != "" %}{% capture line2 %}Now: {{ m.position }}{% endcapture %}{% else %}{% assign line2 = where %}{% endif %}
+  {% else %}
+    {% assign role = m.position | default: "" %}
+    {% if m.group == "members" and role == "" %}{% assign line2 = "" %}{% else %}{% assign line2 = where %}{% endif %}
+{% endcase %}
+{% if role != "" %}<p class="member__role">{{ role }}</p>{% endif %}
+{% assign line2 = line2 | strip %}
+{% if line2 != "" %}<p class="member__aff">{{ line2 }}</p>{% endif %}

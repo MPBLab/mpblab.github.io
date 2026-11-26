@@ -24,14 +24,23 @@ permalink: /members/
 </section>
 {% endif %}
 
-{% assign groups = "members|Lab members|Researchers and students at CUET who publish with the lab.;collaborators|Collaborators|Co-authors at other universities." | split: ";" %}
-{% for g in groups %}
-{% assign gparts = g | split: "|" %}
-{% assign people = site.data.members | where: "group", gparts[0] %}
+{% comment %}
+  Sections, in order: "status:group:title:note". People whose status is empty
+  appear under "Lab members" until their details are filled in.
+{% endcomment %}
+{% assign sections = "faculty|members|Faculty members|Teachers and researchers at CUET who work with the lab.;postdoc|members|Postdoctoral researchers|;phd|members|PhD students|;mphil|members|MPhil students|;msc|members|MSc students|;bsc|members|Undergraduate students|;|members|Lab members|Researchers and students at CUET who publish with the lab.;alumni|members|Alumni|Former students who completed their degree with the lab.;|collaborators|Collaborators|Co-authors at other universities." | split: ";" %}
+{% for sec in sections %}
+{% assign sp = sec | split: "|" %}
+{% assign want = sp[0] | default: "" %}
+{% assign people = "" | split: "" %}
+{% for m in site.data.members %}
+  {% assign mst = m.status | default: "" | downcase %}
+  {% if m.group == sp[1] and mst == want %}{% assign people = people | push: m %}{% endif %}
+{% endfor %}
 {% if people.size > 0 %}
-<section class="member-group" aria-labelledby="h-{{ gparts[0] }}">
-  <h2 id="h-{{ gparts[0] }}">{{ gparts[1] }}</h2>
-  <p class="group-note">{{ gparts[2] }}</p>
+<section class="member-group" aria-labelledby="h-{{ forloop.index }}">
+  <h2 id="h-{{ forloop.index }}">{{ sp[2] }}</h2>
+  {% if sp[3] and sp[3] != "" %}<p class="group-note">{{ sp[3] }}</p>{% endif %}
   <div class="member-grid">
     {% for m in people %}
     {% assign n = 0 %}{% assign topics = "" | split: "" %}
@@ -50,8 +59,7 @@ permalink: /members/
       <div class="member__photo" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>
       {% endif %}
       <h3 class="member__name">{{ m.name }}</h3>
-      {% if m.role and m.role != "" %}<p class="member__role">{{ m.role }}</p>{% endif %}
-      {% if m.affiliation and m.affiliation != "" %}<p class="member__aff">{{ m.affiliation }}</p>{% endif %}
+      {% include member-role.html m=m %}
       {% if m.intro and m.intro != "" %}<p class="member__intro">{{ m.intro }}</p>{% endif %}
       {% if topics.size > 0 %}
       <ul class="member__topics" aria-label="Research topics">
