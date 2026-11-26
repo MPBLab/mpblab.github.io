@@ -139,12 +139,13 @@ under the name is written automatically:
 |---|---|---|
 | `phd`, `mphil`, `msc`, `bsc` | `year` (started), `department` | MSc student (since 2024)<br>Department of Mathematics, CUET |
 | `faculty` | `position`, `department` | Assistant Professor<br>Department of Mathematics, CUET |
+| `ra` | `department` | Research Assistant<br>Department of Mathematics, CUET |
 | `postdoc` | `department` | Postdoctoral researcher<br>Department of Mathematics, CUET |
 | `alumni` | `degree`, `year` (graduated), `position` (current job) | MSc graduate, 2024<br>Now: Lecturer, XYZ University |
 | (collaborators) | `position` | Professor<br>Bharathiar University, India |
 
 The Members page groups people by status: Faculty members, Postdoctoral
-researchers, PhD, MPhil, MSc and Undergraduate students, Lab members (status
+researchers, Research assistants, PhD, MPhil, MSc and Undergraduate students, Lab members (status
 not filled in yet), Alumni and Collaborators. To move someone between lab
 members and collaborators, change `group`.
 

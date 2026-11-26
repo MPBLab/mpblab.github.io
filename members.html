@@ -28,7 +28,7 @@ permalink: /members/
   Sections, in order: "status:group:title:note". People whose status is empty
   appear under "Lab members" until their details are filled in.
 {% endcomment %}
-{% assign sections = "faculty|members|Faculty members|Teachers and researchers at CUET who work with the lab.;postdoc|members|Postdoctoral researchers|;phd|members|PhD students|;mphil|members|MPhil students|;msc|members|MSc students|;bsc|members|Undergraduate students|;|members|Lab members|Researchers and students at CUET who publish with the lab.;alumni|members|Alumni|Former students who completed their degree with the lab.;|collaborators|Collaborators|Co-authors at other universities." | split: ";" %}
+{% assign sections = "faculty|members|Faculty members|Teachers and researchers at CUET who work with the lab.;postdoc|members|Postdoctoral researchers|;ra|members|Research assistants|;phd|members|PhD students|;mphil|members|MPhil students|;msc|members|MSc students|;bsc|members|Undergraduate students|;|members|Lab members|Researchers and students at CUET who publish with the lab.;alumni|members|Alumni|Former students who completed their degree with the lab.;|collaborators|Collaborators|Co-authors at other universities." | split: ";" %}
 {% for sec in sections %}
 {% assign sp = sec | split: "|" %}
 {% assign want = sp[0] | default: "" %}

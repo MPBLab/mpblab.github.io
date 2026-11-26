@@ -11,6 +11,7 @@
 #   status:      what the person is now, which decides their section on the
 #                Members page and the line shown under their name:
 #                  faculty   - teaching staff (fill in position)
+#                  ra        - research assistant
 #                  postdoc   - postdoctoral researcher
 #                  phd, mphil, msc, bsc - current student in that degree
 #                  alumni    - finished their degree with the lab
@@ -45,7 +46,7 @@
   short: "S. Akther"
   aliases: ["Salena Akther", "S. Akther"]
   group: members
-  status: ""
+  status: "phd"
   position: ""
   degree: ""
   year: ""
@@ -59,7 +60,7 @@
   short: "T. S. Tanjil"
   aliases: ["Tokey Sifullah Tanjil"]
   group: members
-  status: ""
+  status: "ra"
   position: ""
   degree: ""
   year: ""
@@ -73,7 +74,7 @@
   short: "S. Akter"
   aliases: ["Shahrina Akter"]
   group: members
-  status: ""
+  status: "phd"
   position: ""
   degree: ""
   year: ""
@@ -87,9 +88,9 @@
   short: "S. Barua"
   aliases: ["Sagar Barua", "S. Barua"]
   group: members
-  status: ""
+  status: "alumni"
   position: ""
-  degree: ""
+  degree: "MPhil"
   year: ""
   department: ""
   affiliation: "CUET"
@@ -101,9 +102,9 @@
   short: "M. I. H. Sakib"
   aliases: ["M. I. H. Sakib"]
   group: members
-  status: ""
+  status: "alumni"
   position: ""
-  degree: ""
+  degree: "MPhil"
   year: ""
   department: ""
   affiliation: "CUET"
@@ -129,7 +130,7 @@
   short: "S. A. Iqbal"
   aliases: ["Sayed Allamah Iqbal", "S. A. Iqbal"]
   group: members
-  status: ""
+  status: "phd"
   position: ""
   degree: ""
   year: ""
@@ -143,37 +144,9 @@
   short: "M. J. Islam"
   aliases: ["Md. Jahidul Islam", "M. J. Islam"]
   group: members
-  status: ""
+  status: "alumni"
   position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "CUET"
-  photo: ""
-  intro: ""
-
-- id: md-mamun-sarkar
-  name: "Md. Mamun Sarkar"
-  short: "M. M. Sarkar"
-  aliases: ["Md. Mamun Sarkar", "M. M. Sarkar"]
-  group: members
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "CUET"
-  photo: ""
-  intro: ""
-
-- id: asaduzzaman
-  name: "Asaduzzaman"
-  short: "Asaduzzaman"
-  aliases: ["Asaduzzaman"]
-  group: members
-  status: ""
-  position: ""
-  degree: ""
+  degree: "MSc"
   year: ""
   department: ""
   affiliation: "CUET"
@@ -185,8 +158,8 @@
   short: "M. D. Hossain"
   aliases: ["M. D. Hossain"]
   group: members
-  status: ""
-  position: ""
+  status: "faculty"
+  position: "Professor"
   degree: ""
   year: ""
   department: ""
@@ -199,8 +172,22 @@
   short: "M. J. Abedin"
   aliases: ["Md. Joynul Abedin", "M. J. Abedin"]
   group: members
-  status: ""
-  position: ""
+  status: "faculty"
+  position: "Assistant Professor"
+  degree: ""
+  year: ""
+  department: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: md-mamun-sarkar
+  name: "Md. Mamun Sarkar"
+  short: "M. M. Sarkar"
+  aliases: ["Md. Mamun Sarkar", "M. M. Sarkar"]
+  group: members
+  status: "faculty"
+  position: "Lecturer"
   degree: ""
   year: ""
   department: ""
@@ -213,7 +200,7 @@
   short: "A. Hoque"
   aliases: ["Amanul Hoque", "A. Hoque"]
   group: members
-  status: ""
+  status: "phd"
   position: ""
   degree: ""
   year: ""
@@ -227,7 +214,7 @@
   short: "M. A. Islam"
   aliases: ["Md. Aminul Islam"]
   group: members
-  status: ""
+  status: "phd"
   position: ""
   degree: ""
   year: ""
@@ -241,21 +228,7 @@
   short: "M. O. Rahman"
   aliases: ["Md. Obaidur Rahman"]
   group: members
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "CUET"
-  photo: ""
-  intro: ""
-
-- id: m-n-islam
-  name: "M. N. Islam"
-  short: "M. N. Islam"
-  aliases: ["M. N. Islam"]
-  group: members
-  status: ""
+  status: "phd"
   position: ""
   degree: ""
   year: ""
@@ -269,7 +242,7 @@
   short: "F. A. Prema"
   aliases: ["Fahmida Akter Prema"]
   group: members
-  status: ""
+  status: "msc"
   position: ""
   degree: ""
   year: ""
@@ -283,9 +256,9 @@
   short: "P. Akter"
   aliases: ["Parvin Akter"]
   group: members
-  status: ""
+  status: "alumni"
   position: ""
-  degree: ""
+  degree: "MPhil"
   year: ""
   department: ""
   affiliation: "CUET"
@@ -297,7 +270,7 @@
   short: "T. A. Min"
   aliases: ["T. A. Min"]
   group: members
-  status: ""
+  status: "msc"
   position: ""
   degree: ""
   year: ""
@@ -311,7 +284,7 @@
   short: "M. T. H. Rayhan"
   aliases: ["M. T. H. Rayhan"]
   group: members
-  status: ""
+  status: "msc"
   position: ""
   degree: ""
   year: ""
@@ -325,51 +298,9 @@
   short: "F. Zaman"
   aliases: ["Fowziyah Zaman"]
   group: members
-  status: ""
+  status: "alumni"
   position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "CUET"
-  photo: ""
-  intro: ""
-
-- id: r-akter
-  name: "R. Akter"
-  short: "R. Akter"
-  aliases: ["R. Akter"]
-  group: members
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "CUET"
-  photo: ""
-  intro: ""
-
-- id: m-a-islam
-  name: "M. A. Islam"
-  short: "M. A. Islam"
-  aliases: ["M. A. Islam"]
-  group: members
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "CUET"
-  photo: ""
-  intro: ""
-
-- id: ujjwal-kumar-deb
-  name: "Ujjwal Kumar Deb"
-  short: "U. K. Deb"
-  aliases: ["U. K. Deb"]
-  group: members
-  status: ""
-  position: ""
-  degree: ""
+  degree: "MSc"
   year: ""
   department: ""
   affiliation: "CUET"
@@ -390,114 +321,3 @@
   photo: ""
   intro: ""
 
-- id: shanmugam-harshavarthini
-  name: "Shanmugam Harshavarthini"
-  short: "S. Harshavarthini"
-  aliases: ["Shanmugam Harshavarthini"]
-  group: collaborators
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "Vellore Institute of Technology, India"
-  photo: ""
-  intro: ""
-
-- id: wenxin-wang
-  name: "Wenxin Wang"
-  short: "W. Wang"
-  aliases: ["Wenxin Wang"]
-  group: collaborators
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "Harbin Engineering University, China"
-  photo: ""
-  intro: ""
-
-- id: xiande-wu
-  name: "Xiande Wu"
-  short: "X. Wu"
-  aliases: ["Xiande Wu"]
-  group: collaborators
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "Harbin Engineering University, China"
-  photo: ""
-  intro: ""
-
-- id: narayanan-aravinth
-  name: "Narayanan Aravinth"
-  short: "N. Aravinth"
-  aliases: ["N. Aravinth"]
-  group: collaborators
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "Karpagam Academy of Higher Education, India; Chungbuk National University, South Korea"
-  photo: ""
-  intro: ""
-
-- id: thangavel-satheesh
-  name: "Thangavel Satheesh"
-  short: "T. Satheesh"
-  aliases: ["T. Satheesh"]
-  group: collaborators
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "Karpagam Academy of Higher Education, India; Chungbuk National University, South Korea"
-  photo: ""
-  intro: ""
-
-- id: md-eaqub-ali
-  name: "Md. Eaqub Ali"
-  short: "M. E. Ali"
-  aliases: ["M. Eaqub Ali"]
-  group: collaborators
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "Sonargaon University, Bangladesh"
-  photo: ""
-  intro: ""
-
-- id: md-abdus-samad
-  name: "Md. Abdus Samad"
-  short: "M. A. Samad"
-  aliases: ["M. A. Samad"]
-  group: collaborators
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "University of Dhaka, Bangladesh"
-  photo: ""
-  intro: ""
-
-- id: md-mahbub-alam
-  name: "Md. Mahbub Alam"
-  short: "M. M. Alam"
-  aliases: ["M. M. Alam"]
-  group: collaborators
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "Khulna University, Bangladesh"
-  photo: ""
-  intro: ""

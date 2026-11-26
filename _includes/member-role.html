@@ -13,6 +13,8 @@
 {% case st %}
   {% when "faculty" %}
     {% assign role = m.position | default: "Faculty member" %}{% assign line2 = where %}
+  {% when "ra" %}
+    {% assign role = "Research Assistant" %}{% assign line2 = where %}
   {% when "postdoc" %}
     {% assign role = "Postdoctoral researcher" %}{% assign line2 = where %}
   {% when "phd" or "mphil" or "msc" or "bsc" %}
