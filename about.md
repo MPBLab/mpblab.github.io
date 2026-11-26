@@ -7,6 +7,10 @@ lede: >-
   in the Department of Mathematics at CUET, led by Prof. Dr. Md. Golam Hafez.
 permalink: /about/
 ---
+<figure class="about-logo">
+  <img src="{{ '/assets/img/logo/mpblab-logo.png' | relative_url }}" width="700" height="692" alt="MPB Lab logo: Mathematical Physics & Biology Research Lab">
+</figure>
+
 <div class="prose" markdown="1">
 
 ## What we do

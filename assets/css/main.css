@@ -11,6 +11,7 @@
 @font-face { font-family: "CMU Serif"; font-weight: 600 700; font-style: italic; font-display: swap; src: url("../fonts/cmu-serif-700-italic.woff2") format("woff2"); }
 @font-face { font-family: "CMU Bright"; font-weight: 400 500; font-display: swap; src: url("../fonts/cmu-bright-500-roman.woff2") format("woff2"); }
 @font-face { font-family: "CMU Bright"; font-weight: 600 700; font-display: swap; src: url("../fonts/cmu-bright-600-roman.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 700; font-display: swap; src: url("../fonts/montserrat-latin-700-normal.woff2") format("woff2"); }
 
 :root {
   --white: #ffffff;
@@ -82,8 +83,12 @@ a:hover { text-decoration: underline; text-underline-offset: 0.18em; }
 .brand { display: flex; align-items: center; gap: 0.75rem; color: var(--ink); }
 .brand:hover { text-decoration: none; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.15; }
-.brand__name { font-weight: 700; font-size: 1.4rem; }
-.brand__full { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); }
+.brand__mark { display: block; width: auto; height: 60px; }
+@media (max-width: 600px) { .brand__mark { height: 50px; } }
+.brand__name { font-family: "Montserrat", var(--sans); font-weight: 700; font-size: 1.45rem; letter-spacing: -0.01em; line-height: 1.1; }
+.brand__mpb { color: #1d3f8f; }
+.brand__lab { color: #2a9fd6; }
+.brand__full { font-family: var(--sans); font-size: 0.82rem; color: #1d3f8f; margin-top: 0.1rem; }
 
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.2rem 1.5rem; }
 .site-nav a { color: var(--ink); font-family: var(--sans); font-size: 1rem; padding: 0.35rem 0; border-bottom: 2px solid transparent; }
@@ -289,6 +294,8 @@ a:hover { text-decoration: underline; text-underline-offset: 0.18em; }
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem 3rem; }
 .contact-grid h2 { margin-top: 0; font-size: 1.25rem; }
 .contact-grid address { font-style: normal; }
+.about-logo { margin: 0 0 2rem; }
+.about-logo img { display: block; width: min(100%, 26rem); height: auto; }
 
 /* ---------- Footer ---------- */
 

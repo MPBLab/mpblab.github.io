@@ -43,7 +43,7 @@ baseurl: ""
 tagline: "Department of Mathematics, CUET, Bangladesh"
 lang: en_US
 logo: /assets/img/logo.png
-image: /assets/img/share.png
+image: /assets/img/share.jpg
 social:
   name: "Mathematical Physics & Biology Research Lab"
   links:
@@ -75,7 +75,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/img/share.png
+      image: /assets/img/share.jpg
   - scope:
       path: ""
       type: research
