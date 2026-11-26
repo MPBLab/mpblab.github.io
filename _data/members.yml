@@ -111,20 +111,6 @@
   photo: ""
   intro: ""
 
-- id: m-a-kauser
-  name: "M. A. Kauser"
-  short: "M. A. Kauser"
-  aliases: ["M. A. Kauser"]
-  group: members
-  status: ""
-  position: ""
-  degree: ""
-  year: ""
-  department: ""
-  affiliation: "CUET"
-  photo: ""
-  intro: ""
-
 - id: sayed-allamah-iqbal
   name: "Sayed Allamah Iqbal"
   short: "S. A. Iqbal"

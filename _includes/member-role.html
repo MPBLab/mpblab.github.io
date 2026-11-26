@@ -1,32 +1,38 @@
 {% comment %}
-  The lines under a member's name, written from their status fields:
-    faculty   ->  Assistant Professor / Department of Mathematics, CUET
-    phd ...   ->  PhD student (since 2024) / Department of Mathematics, CUET
-    alumni    ->  MSc graduate, 2024 / Now: Lecturer, XYZ University
-    postdoc   ->  Postdoctoral researcher / Department ..., CUET
-  Collaborators and people without a status show their position (if any)
-  and university.
+  The line under a member's name, written from their status fields, e.g.
+    Ph.D. Student, CUET
+    Assistant Professor, CUET
+    Research Assistant, CUET
+    M.Phil. Graduate, CUET            (alumni; a second line "Now: ..." if position is set)
+    Professor, Bharathiar University, India   (collaborators)
+  If a department is filled in it is added before the university:
+    Ph.D. Student, Department of Mathematics, CUET
 {% endcomment %}
 {% assign m = include.m %}
 {% assign st = m.status | default: "" | downcase %}
 {% capture where %}{% if m.department and m.department != "" %}{{ m.department }}{% if m.affiliation and m.affiliation != "" %}, {% endif %}{% endif %}{{ m.affiliation }}{% endcapture %}
+{% assign where = where | strip %}
+{% assign now = "" %}
 {% case st %}
   {% when "faculty" %}
-    {% assign role = m.position | default: "Faculty member" %}{% assign line2 = where %}
+    {% assign role = m.position | default: "Faculty Member" %}
   {% when "ra" %}
-    {% assign role = "Research Assistant" %}{% assign line2 = where %}
+    {% assign role = "Research Assistant" %}
   {% when "postdoc" %}
-    {% assign role = "Postdoctoral researcher" %}{% assign line2 = where %}
+    {% assign role = "Postdoctoral Researcher" %}
   {% when "phd" or "mphil" or "msc" or "bsc" %}
-    {% assign deg = st | replace: "phd", "PhD" | replace: "mphil", "MPhil" | replace: "msc", "MSc" | replace: "bsc", "BSc" %}
-    {% capture role %}{{ deg }} student{% if m.year and m.year != "" %} (since {{ m.year }}){% endif %}{% endcapture %}{% assign line2 = where %}
+    {% assign deg = st | replace: "mphil", "M.Phil." | replace: "phd", "Ph.D." | replace: "msc", "M.Sc." | replace: "bsc", "B.Sc." %}
+    {% capture role %}{{ deg }} Student{% if m.year and m.year != "" %} (since {{ m.year }}){% endif %}{% endcapture %}
   {% when "alumni" %}
-    {% capture role %}{% if m.degree and m.degree != "" %}{{ m.degree }} graduate{% else %}Former member{% endif %}{% if m.year and m.year != "" %}, {{ m.year }}{% endif %}{% endcapture %}
-    {% if m.position and m.position != "" %}{% capture line2 %}Now: {{ m.position }}{% endcapture %}{% else %}{% assign line2 = where %}{% endif %}
+    {% assign deg = m.degree | default: "" | replace: "MPhil", "M.Phil." | replace: "PhD", "Ph.D." | replace: "MSc", "M.Sc." | replace: "BSc", "B.Sc." %}
+    {% capture role %}{% if deg != "" %}{{ deg }} Graduate{% else %}Former Member{% endif %}{% if m.year and m.year != "" %} ({{ m.year }}){% endif %}{% endcapture %}
+    {% if m.position and m.position != "" %}{% capture now %}Now: {{ m.position }}{% endcapture %}{% endif %}
   {% else %}
     {% assign role = m.position | default: "" %}
-    {% if m.group == "members" and role == "" %}{% assign line2 = "" %}{% else %}{% assign line2 = where %}{% endif %}
+    {% if m.group == "members" and role == "" %}{% assign where = "" %}{% endif %}
 {% endcase %}
-{% if role != "" %}<p class="member__role">{{ role }}</p>{% endif %}
-{% assign line2 = line2 | strip %}
-{% if line2 != "" %}<p class="member__aff">{{ line2 }}</p>{% endif %}
+{% assign role = role | strip %}
+{% capture line %}{{ role }}{% if role != "" and where != "" %}, {% endif %}{{ where }}{% endcapture %}
+{% assign line = line | strip %}
+{% if line != "" %}<p class="member__role">{{ line }}</p>{% endif %}
+{% if now != "" %}<p class="member__aff">{{ now }}</p>{% endif %}

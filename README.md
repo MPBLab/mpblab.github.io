@@ -137,12 +137,15 @@ under the name is written automatically:
 
 | status | Fill in | Shown as |
 |---|---|---|
-| `phd`, `mphil`, `msc`, `bsc` | `year` (started), `department` | MSc student (since 2024)<br>Department of Mathematics, CUET |
-| `faculty` | `position`, `department` | Assistant Professor<br>Department of Mathematics, CUET |
-| `ra` | `department` | Research Assistant<br>Department of Mathematics, CUET |
-| `postdoc` | `department` | Postdoctoral researcher<br>Department of Mathematics, CUET |
-| `alumni` | `degree`, `year` (graduated), `position` (current job) | MSc graduate, 2024<br>Now: Lecturer, XYZ University |
-| (collaborators) | `position` | Professor<br>Bharathiar University, India |
+| `phd`, `mphil`, `msc`, `bsc` | `year` (optional, started) | Ph.D. Student, CUET |
+| `faculty` | `position` | Assistant Professor, CUET |
+| `ra` | | Research Assistant, CUET |
+| `postdoc` | | Postdoctoral Researcher, CUET |
+| `alumni` | `degree`, optional `year` (graduated) and `position` (current job) | M.Sc. Graduate, CUET<br>Now: Lecturer, XYZ University |
+| (collaborators) | `position` | Professor, Bharathiar University, India |
+
+If `department` is filled in, it is added before the university, e.g.
+"Ph.D. Student, Department of Mathematics, CUET".
 
 The Members page groups people by status: Faculty members, Postdoctoral
 researchers, Research assistants, PhD, MPhil, MSc and Undergraduate students, Lab members (status
