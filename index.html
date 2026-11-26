@@ -37,7 +37,20 @@ layout: default
   </div>
 </section>
 
-<section class="section section--alt" aria-labelledby="leader-heading">
+{% assign recent = site.data.publications | sort: "date" | reverse %}
+{% if recent.size > 0 %}
+<section class="section section--alt" aria-labelledby="recent-heading">
+  <div class="container">
+    <h2 id="recent-heading" class="section__title">Recent publications</h2>
+    <div class="pub-grid">
+      {% for p in recent limit:3 %}{% include pub-card.html p=p %}{% endfor %}
+    </div>
+    <p class="more-link"><a class="link-strong" href="{{ '/publications/' | relative_url }}">All {{ recent.size }} publications</a></p>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" aria-labelledby="leader-heading">
   <div class="container split">
     <div>
       <h2 class="section__title">About the lab</h2>

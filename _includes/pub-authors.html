@@ -1,0 +1,29 @@
+{% comment %}
+  Author line with photo circles. Each name in the paper's author list is
+  matched to a person in _data/members.yml through their "aliases".
+{% endcomment %}
+{% assign names = include.p.authors | split: ", " %}
+<div class="pub-authors">
+  <span class="avatars" aria-hidden="true">
+    {%- for a in names limit: 6 -%}
+    {%- assign who = a | strip -%}
+    {%- assign m = site.data.members | where_exp: "x", "x.aliases contains who" | first -%}
+    {%- if m -%}
+    <a class="avatar avatar--{{ m.group }}" href="{{ '/members/' | relative_url }}#{{ m.id }}" tabindex="-1" title="{{ m.name }}">
+      {%- if m.photo and m.photo != "" -%}<img src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" alt="" loading="lazy">{%- else -%}{%- assign parts = m.short | split: " " -%}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{%- endif -%}
+    </a>
+    {%- else -%}
+    {%- assign parts = who | split: " " -%}
+    <span class="avatar" title="{{ who }}">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+    {%- endif -%}
+    {%- endfor -%}
+  </span>
+  <span class="pub-authors__names">
+    {%- for a in names -%}
+    {%- assign who = a | strip -%}
+    {%- assign m = site.data.members | where_exp: "x", "x.aliases contains who" | first -%}
+    {%- if m and m.group != "collaborators" -%}<a href="{{ '/members/' | relative_url }}#{{ m.id }}"><b>{{ m.short }}</b></a>{%- elsif m -%}{{ m.short }}{%- else -%}{{ who }}{%- endif -%}
+    {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor -%}
+  </span>
+</div>

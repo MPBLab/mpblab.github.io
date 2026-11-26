@@ -1,0 +1,360 @@
+# Lab members and co-authors.
+#
+# Built from the authors of the lab's papers. Each person appears once.
+#
+#   id:          used in web addresses (/members/#id) and for the photo file name
+#   name:        full name as it should be shown
+#   short:       short form used on publication cards (e.g. "T. S. Tanjil")
+#   aliases:     every spelling of the name used in _data/publications.yml,
+#                so papers are linked to the right person
+#   group:       leader, members or collaborators
+#   role:        e.g. "PhD student", "MSc student", "Faculty member, CUET"
+#   affiliation: university or department
+#   photo:       file name in assets/img/members/ (e.g. tokey-sifullah-tanjil.jpg);
+#                leave empty to show initials
+#   intro:       a few sentences introducing the person (optional)
+#   links:       optional email, scholar, researchgate, orcid, website
+#
+# Groups were set from the affiliations recorded with each paper: co-authors at
+# CUET are listed under "members", co-authors elsewhere under "collaborators".
+# Please check them and move anyone to the right group.
+
+- id: hafez
+  name: "Prof. Dr. Md. Golam Hafez"
+  short: "M. G. Hafez"
+  aliases: ["Md. Golam Hafez", "M. G. Hafez"]
+  group: leader
+  role: "Lab leader"
+  affiliation: "Department of Mathematics, CUET"
+  photo: "hafez.jpg"
+  intro: ""
+
+- id: salena-akther
+  name: "Salena Akther"
+  short: "S. Akther"
+  aliases: ["Salena Akther", "S. Akther"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: tokey-sifullah-tanjil
+  name: "Tokey Sifullah Tanjil"
+  short: "T. S. Tanjil"
+  aliases: ["Tokey Sifullah Tanjil"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: shahrina-akter
+  name: "Shahrina Akter"
+  short: "S. Akter"
+  aliases: ["Shahrina Akter"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: sagar-barua
+  name: "Sagar Barua"
+  short: "S. Barua"
+  aliases: ["Sagar Barua", "S. Barua"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: m-i-h-sakib
+  name: "M. I. H. Sakib"
+  short: "M. I. H. Sakib"
+  aliases: ["M. I. H. Sakib"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: m-a-kauser
+  name: "M. A. Kauser"
+  short: "M. A. Kauser"
+  aliases: ["M. A. Kauser"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: sayed-allamah-iqbal
+  name: "Sayed Allamah Iqbal"
+  short: "S. A. Iqbal"
+  aliases: ["Sayed Allamah Iqbal", "S. A. Iqbal"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: md-jahidul-islam
+  name: "Md. Jahidul Islam"
+  short: "M. J. Islam"
+  aliases: ["Md. Jahidul Islam", "M. J. Islam"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: md-mamun-sarkar
+  name: "Md. Mamun Sarkar"
+  short: "M. M. Sarkar"
+  aliases: ["Md. Mamun Sarkar", "M. M. Sarkar"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: asaduzzaman
+  name: "Asaduzzaman"
+  short: "Asaduzzaman"
+  aliases: ["Asaduzzaman"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: md-delowar-hossain
+  name: "Md. Delowar Hossain"
+  short: "M. D. Hossain"
+  aliases: ["M. D. Hossain"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: md-joynul-abedin
+  name: "Md. Joynul Abedin"
+  short: "M. J. Abedin"
+  aliases: ["Md. Joynul Abedin", "M. J. Abedin"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: amanul-hoque
+  name: "Amanul Hoque"
+  short: "A. Hoque"
+  aliases: ["Amanul Hoque", "A. Hoque"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: md-aminul-islam
+  name: "Md. Aminul Islam"
+  short: "M. A. Islam"
+  aliases: ["Md. Aminul Islam"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: md-obaidur-rahman
+  name: "Md. Obaidur Rahman"
+  short: "M. O. Rahman"
+  aliases: ["Md. Obaidur Rahman"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: m-n-islam
+  name: "M. N. Islam"
+  short: "M. N. Islam"
+  aliases: ["M. N. Islam"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: fahmida-akter-prema
+  name: "Fahmida Akter Prema"
+  short: "F. A. Prema"
+  aliases: ["Fahmida Akter Prema"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: parvin-akter
+  name: "Parvin Akter"
+  short: "P. Akter"
+  aliases: ["Parvin Akter"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: t-a-min
+  name: "T. A. Min"
+  short: "T. A. Min"
+  aliases: ["T. A. Min"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: m-t-h-rayhan
+  name: "M. T. H. Rayhan"
+  short: "M. T. H. Rayhan"
+  aliases: ["M. T. H. Rayhan"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: fowziyah-zaman
+  name: "Fowziyah Zaman"
+  short: "F. Zaman"
+  aliases: ["Fowziyah Zaman"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: r-akter
+  name: "R. Akter"
+  short: "R. Akter"
+  aliases: ["R. Akter"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: m-a-islam
+  name: "M. A. Islam"
+  short: "M. A. Islam"
+  aliases: ["M. A. Islam"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: ujjwal-kumar-deb
+  name: "Ujjwal Kumar Deb"
+  short: "U. K. Deb"
+  aliases: ["U. K. Deb"]
+  group: members
+  role: ""
+  affiliation: "CUET"
+  photo: ""
+  intro: ""
+
+- id: rathinasamy-sakthivel
+  name: "Rathinasamy Sakthivel"
+  short: "R. Sakthivel"
+  aliases: ["Rathinasamy Sakthivel", "R. Sakthivel"]
+  group: collaborators
+  role: ""
+  affiliation: "Bharathiar University, India"
+  photo: ""
+  intro: ""
+
+- id: shanmugam-harshavarthini
+  name: "Shanmugam Harshavarthini"
+  short: "S. Harshavarthini"
+  aliases: ["Shanmugam Harshavarthini"]
+  group: collaborators
+  role: ""
+  affiliation: "Vellore Institute of Technology, India"
+  photo: ""
+  intro: ""
+
+- id: wenxin-wang
+  name: "Wenxin Wang"
+  short: "W. Wang"
+  aliases: ["Wenxin Wang"]
+  group: collaborators
+  role: ""
+  affiliation: "Harbin Engineering University, China"
+  photo: ""
+  intro: ""
+
+- id: xiande-wu
+  name: "Xiande Wu"
+  short: "X. Wu"
+  aliases: ["Xiande Wu"]
+  group: collaborators
+  role: ""
+  affiliation: "Harbin Engineering University, China"
+  photo: ""
+  intro: ""
+
+- id: narayanan-aravinth
+  name: "Narayanan Aravinth"
+  short: "N. Aravinth"
+  aliases: ["N. Aravinth"]
+  group: collaborators
+  role: ""
+  affiliation: "Karpagam Academy of Higher Education, India; Chungbuk National University, South Korea"
+  photo: ""
+  intro: ""
+
+- id: thangavel-satheesh
+  name: "Thangavel Satheesh"
+  short: "T. Satheesh"
+  aliases: ["T. Satheesh"]
+  group: collaborators
+  role: ""
+  affiliation: "Karpagam Academy of Higher Education, India; Chungbuk National University, South Korea"
+  photo: ""
+  intro: ""
+
+- id: md-eaqub-ali
+  name: "Md. Eaqub Ali"
+  short: "M. E. Ali"
+  aliases: ["M. Eaqub Ali"]
+  group: collaborators
+  role: ""
+  affiliation: "Sonargaon University, Bangladesh"
+  photo: ""
+  intro: ""
+
+- id: md-abdus-samad
+  name: "Md. Abdus Samad"
+  short: "M. A. Samad"
+  aliases: ["M. A. Samad"]
+  group: collaborators
+  role: ""
+  affiliation: "University of Dhaka, Bangladesh"
+  photo: ""
+  intro: ""
+
+- id: md-mahbub-alam
+  name: "Md. Mahbub Alam"
+  short: "M. M. Alam"
+  aliases: ["M. M. Alam"]
+  group: collaborators
+  role: ""
+  affiliation: "Khulna University, Bangladesh"
+  photo: ""
+  intro: ""

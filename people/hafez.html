@@ -6,8 +6,8 @@ description: >-
   Mathematical Physics & Biology Research Lab.
 lede: Professor, Department of Mathematics, CUET. Leader of the MPB Lab.
 parent:
-  title: People
-  url: /people/
+  title: Members
+  url: /members/
 permalink: /people/hafez/
 ---
 {% assign p = site.data.people.leader %}
@@ -70,7 +70,7 @@ permalink: /people/hafez/
   <h2 id="h-pubs">Recent publications</h2>
   {% assign pubs = site.data.publications | sort: "date" | reverse %}
   {% if pubs.size > 0 %}
-  <ol class="pubs">{% for x in pubs limit:5 %}{% include publication.html p=x %}{% endfor %}</ol>
+  <div class="pub-grid">{% for x in pubs limit:3 %}{% include pub-card.html p=x %}{% endfor %}</div>
   <p><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
   {% else %}
   <p class="empty">The publication list is being prepared.</p>

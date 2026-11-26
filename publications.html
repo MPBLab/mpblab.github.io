@@ -5,13 +5,14 @@ description: "Publications of the Mathematical Physics & Biology Research Lab (M
 lede: Journal articles, conference papers and theses by members of the lab.
 permalink: /publications/
 ---
-{% assign pubs = site.data.publications %}
+{% assign pubs = site.data.publications | sort: "date" | reverse %}
 {% if pubs and pubs.size > 0 %}
 <div class="pub-tools" data-pub-tools>
   <div class="pub-filter" role="group" aria-label="Filter by topic">
     <button type="button" data-topic="" aria-pressed="true">All topics</button>
     {% for t in site.data.topics %}
-    <button type="button" data-topic="{{ t.id }}" aria-pressed="false">{{ t.name }}</button>
+    {% assign n = site.data.publications | where: "topic", t.id %}
+    {% if n.size > 0 %}<button type="button" data-topic="{{ t.id }}" aria-pressed="false">{{ t.name }} <span class="count">{{ n.size }}</span></button>{% endif %}
     {% endfor %}
   </div>
   <label class="visually-hidden" for="pub-search">Search publications</label>
@@ -19,15 +20,21 @@ permalink: /publications/
 </div>
 <p class="pub-count" data-pub-count aria-live="polite">{{ pubs.size }} publications</p>
 
-{% assign by_year = pubs | group_by: "year" | sort: "name" | reverse %}
+<section class="pub-section" data-pub-group aria-label="Latest paper">
+  {% include pub-card.html p=pubs.first feature=true %}
+</section>
+
+{% assign rest = pubs | slice: 1, pubs.size %}
+{% assign by_year = rest | group_by: "year" | sort: "name" | reverse %}
 {% for year in by_year %}
-<section class="pub-year" aria-labelledby="y-{{ year.name }}">
-  <h2 id="y-{{ year.name }}">{{ year.name }}</h2>
-  <ol class="pubs">
-    {% for p in year.items %}{% include publication.html p=p %}{% endfor %}
-  </ol>
+<section class="pub-section" data-pub-group aria-labelledby="y-{{ year.name }}">
+  <h2 id="y-{{ year.name }}" class="pub-year-title">{{ year.name }}</h2>
+  <div class="pub-grid">
+    {% for p in year.items %}{% include pub-card.html p=p %}{% endfor %}
+  </div>
 </section>
 {% endfor %}
+<p class="empty" data-pub-empty hidden>No publications match. Try another topic or search term.</p>
 {% else %}
 <p class="empty">
   The publication list is being prepared.

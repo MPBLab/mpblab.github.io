@@ -1,0 +1,79 @@
+---
+layout: page
+title: Members
+description: "Members and collaborators of the Mathematical Physics & Biology Research Lab (MPB Lab) at CUET, led by Prof. Dr. Md. Golam Hafez."
+lede: The people behind the lab's research, and the colleagues we work with.
+permalink: /members/
+---
+{% assign pubs = site.data.publications %}
+
+{% comment %} ---------- Lab leader ---------- {% endcomment %}
+{% assign L = site.data.members | where: "group", "leader" | first %}
+{% assign leader = site.data.people.leader %}
+{% if L %}
+<section class="member-leader" id="{{ L.id }}" aria-labelledby="h-leader">
+  {% if L.photo != "" %}<img class="member__photo" src="{{ '/assets/img/members/' | append: L.photo | relative_url }}" alt="Photo of {{ L.name }}">
+  {% else %}<div class="member__photo" aria-hidden="true">{{ leader.initials }}</div>{% endif %}
+  <div>
+    <p class="member__role">Lab leader</p>
+    <h2 id="h-leader">{{ L.name }}</h2>
+    <p class="member__aff">{{ leader.title }}</p>
+    <p class="member__intro">{{ leader.summary }}</p>
+    <p class="member__papers"><a href="{{ site.leader_page | relative_url }}">Full profile</a></p>
+  </div>
+</section>
+{% endif %}
+
+{% assign groups = "members|Lab members|Researchers and students at CUET who publish with the lab.;collaborators|Collaborators|Co-authors at other universities." | split: ";" %}
+{% for g in groups %}
+{% assign gparts = g | split: "|" %}
+{% assign people = site.data.members | where: "group", gparts[0] %}
+{% if people.size > 0 %}
+<section class="member-group" aria-labelledby="h-{{ gparts[0] }}">
+  <h2 id="h-{{ gparts[0] }}">{{ gparts[1] }}</h2>
+  <p class="group-note">{{ gparts[2] }}</p>
+  <div class="member-grid">
+    {% for m in people %}
+    {% assign n = 0 %}{% assign topics = "" | split: "" %}
+    {% for p in pubs %}
+      {% assign names = p.authors | split: ", " %}
+      {% for a in names %}{% assign who = a | strip %}
+        {% if m.aliases contains who %}{% assign n = n | plus: 1 %}{% assign topics = topics | push: p.topic %}{% break %}{% endif %}
+      {% endfor %}
+    {% endfor %}
+    {% assign topics = topics | uniq %}
+    <article class="member member--{{ m.group }}" id="{{ m.id }}">
+      {% if m.photo and m.photo != "" %}
+      <img class="member__photo" src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" alt="Photo of {{ m.name }}" loading="lazy">
+      {% else %}
+      {% assign parts = m.short | split: " " %}
+      <div class="member__photo" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>
+      {% endif %}
+      <h3 class="member__name">{{ m.name }}</h3>
+      {% if m.role and m.role != "" %}<p class="member__role">{{ m.role }}</p>{% endif %}
+      {% if m.affiliation and m.affiliation != "" %}<p class="member__aff">{{ m.affiliation }}</p>{% endif %}
+      {% if m.intro and m.intro != "" %}<p class="member__intro">{{ m.intro }}</p>{% endif %}
+      {% if topics.size > 0 %}
+      <ul class="member__topics" aria-label="Research topics">
+        {% for tid in topics %}{% assign t = site.data.topics | where: "id", tid | first %}{% if t %}<li class="field--{{ t.field }}"><span class="tag">{{ t.name }}</span></li>{% endif %}{% endfor %}
+      </ul>
+      {% endif %}
+      {% if n > 0 %}<p class="member__papers"><a href="{{ '/publications/' | relative_url }}?q={{ m.aliases.first | url_encode }}">{{ n }} paper{% if n != 1 %}s{% endif %} with the lab</a></p>{% endif %}
+      {% assign l = m.links %}
+      {% if l %}
+      <ul class="inline-links">
+        {% if l.email and l.email != "" %}<li><a href="mailto:{{ l.email }}">Email</a></li>{% endif %}
+        {% if l.scholar and l.scholar != "" %}<li><a href="{{ l.scholar }}">Scholar</a></li>{% endif %}
+        {% if l.researchgate and l.researchgate != "" %}<li><a href="{{ l.researchgate }}">ResearchGate</a></li>{% endif %}
+        {% if l.orcid and l.orcid != "" %}<li><a href="{{ l.orcid }}">ORCID</a></li>{% endif %}
+        {% if l.website and l.website != "" %}<li><a href="{{ l.website }}">Website</a></li>{% endif %}
+      </ul>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+
+<p class="empty">Are you a lab member and want to update your profile or photo? See <a href="{{ '/contact/' | relative_url }}">Contact</a>.</p>

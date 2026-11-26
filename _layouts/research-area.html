@@ -11,10 +11,10 @@ layout: default
   <section class="related" aria-labelledby="related-heading">
     <h2 id="related-heading">Publications on this topic</h2>
     {% if pubs.size > 0 %}
-    <ol class="pubs">
+    <div class="pub-grid">
       {% assign sorted = pubs | sort: "date" | reverse %}
-      {% for p in sorted %}{% include publication.html p=p %}{% endfor %}
-    </ol>
+      {% for p in sorted %}{% include pub-card.html p=p %}{% endfor %}
+    </div>
     {% else %}
     <p class="empty">Papers on this topic will be listed here as they are added to the <a href="{{ '/publications/' | relative_url }}">publication list</a>.</p>
     {% endif %}

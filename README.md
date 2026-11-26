@@ -17,7 +17,7 @@ minute or two.
 | About | `/about/` | `about.md` |
 | Research | `/research/` | the files in `_research/` |
 | Research areas (3) | `/research/plasma-waves/` etc. | `_research/*.md` |
-| People | `/people/` | `_data/people.yml` |
+| Members | `/members/` | `_data/members.yml` (lab leader details from `_data/people.yml`) |
 | Lab leader profile | `/people/hafez/` | `_data/people.yml` (the `leader` section) |
 | Publications | `/publications/` | `_data/publications.yml` |
 | News and events | `/news/` | `_data/news.yml` |
@@ -110,6 +110,43 @@ analytics:
 ```
 
 Leave a value empty to turn that service off.
+
+### Members and their photos
+
+Everyone listed on the Members page, and every author circle on the
+publication cards, comes from `_data/members.yml`. Each person has an `id`
+(for example `tokey-sifullah-tanjil`), which is also the name of their photo file.
+
+**Photo guidelines:** square (1:1), at least 400 × 400 pixels, face centred
+with a little space above the head, plain or softly blurred background,
+JPG under 300 KB. The site shows it as a circle.
+
+**To add a photo yourself on GitHub**
+
+1. Open `assets/img/members/` and click **Add file → Upload files**.
+2. Upload the photo named after the person's id, e.g. `tokey-sifullah-tanjil.jpg`.
+3. Open `_data/members.yml`, find that person, and set
+   `photo: "tokey-sifullah-tanjil.jpg"`. Commit.
+
+The photo then appears on the Members page and beside the person's name on
+every publication card.
+
+**Role and introduction:** in the same entry, fill in `role`
+(e.g. `"PhD student"`), `intro` (two or three sentences) and optional `links`.
+To move someone between "Lab members" and "Collaborators", change `group`.
+
+**New co-authors:** when a new paper has an author who is not yet listed, add
+an entry to `members.yml` with that name (exactly as written in
+`publications.yml`) in `aliases`. Until then the author still shows with a
+grey initials circle.
+
+### Publication images
+
+Each card shows an illustration for its topic. To show a figure from the
+paper instead, upload it to `assets/img/pubs/` and add
+`image: "file-name.jpg"` (and optionally `image_alt: "Description"`) to that
+paper in `_data/publications.yml`. A wide image (about 16:10) works best.
+Add `quartile: "Q1"` to show the journal's quartile badge.
 
 ### Adding a photo
 

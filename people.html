@@ -1,46 +1,18 @@
 ---
-layout: page
-title: People
-description: "Members of the Mathematical Physics & Biology Research Lab at CUET, led by Prof. Dr. Md. Golam Hafez."
-lede: The researchers and students who make up the lab.
+layout: null
 permalink: /people/
+sitemap: false
 ---
-{% assign leader = site.data.people.leader %}
-<section class="people-group" aria-labelledby="g-leader">
-  <h2 id="g-leader">Lab leader</h2>
-  <div class="lead-card">
-    {% include person.html person=leader link=site.leader_page %}
-  </div>
-</section>
-
-{% assign shown = 0 %}
-{% for group in site.data.people.groups %}
-{% if group.members and group.members.size > 0 %}
-{% assign shown = shown | plus: 1 %}
-<section class="people-group" aria-labelledby="g-{{ forloop.index }}">
-  <h2 id="g-{{ forloop.index }}">{{ group.name }}</h2>
-  <div class="people-grid">
-    {% for m in group.members %}{% include person.html person=m %}{% endfor %}
-  </div>
-</section>
-{% endif %}
-{% endfor %}
-
-{% if shown == 0 %}
-<section class="people-group" aria-labelledby="g-students">
-  <h2 id="g-students">Students</h2>
-  <p class="empty">Student profiles are being added. Interested in working with us? See <a href="{{ '/join/' | relative_url }}">how to join the lab</a>.</p>
-</section>
-{% endif %}
-
-{% assign alumni = site.data.people.alumni %}
-{% if alumni and alumni.size > 0 %}
-<section class="people-group" aria-labelledby="g-alumni">
-  <h2 id="g-alumni">Alumni</h2>
-  <ul class="alumni">
-    {% for a in alumni %}
-    <li><b>{{ a.name }}</b>{% if a.degree %}, {{ a.degree }}{% endif %}{% if a.year %} ({{ a.year }}){% endif %}{% if a.now %}. Now: {{ a.now }}{% endif %}</li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Members | MPB Lab</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ '/members/' | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/members/' | relative_url }}">
+</head>
+<body>
+  <p>This page has moved to <a href="{{ '/members/' | relative_url }}">Members</a>.</p>
+</body>
+</html>

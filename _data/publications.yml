@@ -5,6 +5,8 @@
 #           date (YYYY-MM-DD, used to order papers within a year), doi, url, type, topic
 #   type:  journal, conference, book, chapter, thesis   (default: journal)
 #   topic: one of the ids in _data/topics.yml
+#   image: a figure from the paper in assets/img/pubs/ (otherwise a topic illustration is shown)
+#   quartile: journal quartile, e.g. "Q1" (shown as a badge)
 #
 # Math: write LaTeX between $...$ (inline) or $$...$$ (displayed), and put
 # that text in SINGLE quotes, e.g.  title: 'Solitons in $\kappa$-distributed plasmas'
