@@ -1,0 +1,78 @@
+---
+layout: default
+title: Prof. Dr. Md. Golam Hafez
+description: >-
+  Prof. Dr. Md. Golam Hafez, Professor of Mathematics at CUET and leader of the
+  Mathematical Physics & Biology Research Lab.
+permalink: /people/hafez/
+---
+{% assign p = site.data.people.leader %}
+<header class="page-head">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/people/' | relative_url }}">People</a></nav>
+</header>
+
+<div class="profile">
+  {% if p.photo and p.photo != "" %}
+  <img class="profile__photo" src="{{ '/assets/img/people/' | append: p.photo | relative_url }}" alt="Photo of {{ p.name }}">
+  {% else %}
+  <div class="profile__photo profile__photo--initials" aria-hidden="true">{{ p.initials }}</div>
+  {% endif %}
+  <div>
+    <h1>{{ p.name }}</h1>
+    <p class="profile__title">{{ p.title }}<br>{{ p.role }}, {{ site.short_name }}</p>
+    <p>{{ p.bio }}</p>
+    {% assign l = p.links %}
+    <ul class="inline-links">
+      {% if l.email != "" %}<li><a href="mailto:{{ l.email }}">Email</a></li>{% endif %}
+      {% if l.scholar != "" %}<li><a href="{{ l.scholar }}">Google Scholar</a></li>{% endif %}
+      {% if l.researchgate != "" %}<li><a href="{{ l.researchgate }}">ResearchGate</a></li>{% endif %}
+      {% if l.orcid != "" %}<li><a href="{{ l.orcid }}">ORCID</a></li>{% endif %}
+    </ul>
+  </div>
+</div>
+
+{% if p.interests.size > 0 %}
+<section aria-labelledby="h-interests">
+  <h2 id="h-interests">Research interests</h2>
+  <ul>{% for i in p.interests %}<li>{{ i }}</li>{% endfor %}</ul>
+</section>
+{% endif %}
+
+{% if p.positions.size > 0 %}
+<section aria-labelledby="h-positions">
+  <h2 id="h-positions">Positions</h2>
+  <ul class="cv-list">{% for x in p.positions %}<li><span class="when">{{ x.years }}</span><span>{{ x.text }}</span></li>{% endfor %}</ul>
+</section>
+{% endif %}
+
+{% if p.education.size > 0 %}
+<section aria-labelledby="h-education">
+  <h2 id="h-education">Education</h2>
+  <ul class="cv-list">{% for x in p.education %}<li><span class="when">{{ x.year }}</span><span>{{ x.degree }}, {{ x.place }}</span></li>{% endfor %}</ul>
+</section>
+{% endif %}
+
+{% if p.service.size > 0 %}
+<section aria-labelledby="h-service">
+  <h2 id="h-service">Editorial and professional service</h2>
+  <ul>{% for s in p.service %}<li>{{ s }}</li>{% endfor %}</ul>
+</section>
+{% endif %}
+
+{% if p.awards.size > 0 %}
+<section aria-labelledby="h-awards">
+  <h2 id="h-awards">Awards</h2>
+  <ul>{% for a in p.awards %}<li>{{ a }}</li>{% endfor %}</ul>
+</section>
+{% endif %}
+
+<section aria-labelledby="h-pubs">
+  <h2 id="h-pubs">Recent publications</h2>
+  {% assign pubs = site.data.publications | sort: "year" | reverse %}
+  {% if pubs.size > 0 %}
+  <ol class="pubs">{% for x in pubs limit:5 %}{% include publication.html p=x %}{% endfor %}</ol>
+  <p><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
+  {% else %}
+  <p class="empty">The publication list is being prepared.</p>
+  {% endif %}
+</section>

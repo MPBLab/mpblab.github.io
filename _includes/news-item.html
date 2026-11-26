@@ -1,0 +1,9 @@
+{% assign n = include.item %}
+<li class="news-item">
+  <time datetime="{{ n.date }}">{{ n.date | date: "%-d %b %Y" }}</time>
+  <div>
+    <p class="news-item__title">{% if n.link %}<a href="{{ n.link }}">{{ n.title }}</a>{% else %}{{ n.title }}{% endif %}{% if n.type and n.type != "news" %} <span class="tag">{{ n.type | capitalize }}</span>{% endif %}</p>
+    {% if n.place %}<p class="news-item__place">{{ n.place }}</p>{% endif %}
+    {% if n.text %}<p class="news-item__text">{{ n.text }}</p>{% endif %}
+  </div>
+</li>

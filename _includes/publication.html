@@ -1,0 +1,12 @@
+{% assign p = include.p %}
+{% assign t = site.data.topics | where: "id", p.topic | first %}
+<li class="pub{% if t %} field--{{ t.field }}{% endif %}" data-topic="{{ p.topic }}" data-year="{{ p.year }}">
+  <p class="pub__title">
+    {% if p.doi %}<a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% elsif p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+  </p>
+  <p class="pub__authors">{{ p.authors }}</p>
+  <p class="pub__venue">
+    {% if p.journal %}<cite>{{ p.journal }}</cite>{% endif %}{% if p.volume %} <b>{{ p.volume }}</b>{% endif %}{% if p.issue %}({{ p.issue }}){% endif %}{% if p.pages %}, {{ p.pages }}{% endif %} ({{ p.year }}){% if p.type and p.type != "journal" %}, {{ p.type }}{% endif %}
+    {% if t %}<span class="tag">{{ t.name }}</span>{% endif %}
+  </p>
+</li>

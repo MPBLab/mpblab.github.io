@@ -2,11 +2,14 @@
 layout: default
 ---
 <header class="page-head">
-  <div class="wrap">
-    <h1>{{ page.title }}</h1>
-    {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
-  </div>
+  {% if page.parent %}
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="{{ page.parent.url | relative_url }}">{{ page.parent.title }}</a>
+  </nav>
+  {% endif %}
+  <h1>{{ page.title }}</h1>
+  {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
 </header>
-<div class="wrap page-body">
+<div class="page-body">
   {{ content }}
 </div>

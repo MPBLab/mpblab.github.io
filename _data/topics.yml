@@ -1,0 +1,13 @@
+# Research topics used to tag publications and news.
+# The "id" must match the file name of the research page in _research/.
+# field: physics (blue) or biology (green)
+
+- id: plasma-waves
+  name: Nonlinear waves in plasmas
+  field: physics
+- id: evolution-equations
+  name: Nonlinear evolution equations
+  field: physics
+- id: mathematical-biology
+  name: Mathematical biology
+  field: biology

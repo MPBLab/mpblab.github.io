@@ -1,17 +1,20 @@
 <header class="site-header">
-  <div class="split-bar" aria-hidden="true"><span></span><span></span></div>
-  <div class="wrap site-header__inner">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.short_name }} home">
-      {% include logo.html %}
-      <span class="brand__name">MPB<span class="brand__lab">Lab</span></span>
-    </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul>
-        {% for item in site.data.navigation %}
-        <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </div>
+  <a class="brand" href="{{ '/' | relative_url }}">
+    {% include logo.html %}
+    <span class="brand__text">
+      <span class="brand__name">MPB Lab</span>
+      <span class="brand__full">Mathematical Physics &amp; Biology Research Lab</span>
+    </span>
+  </a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  <nav id="site-nav" class="site-nav" aria-label="Main">
+    <ul>
+      {% for item in site.data.navigation %}
+      {% assign current = false %}
+      {% if page.url == item.url %}{% assign current = "page" %}
+      {% elsif item.url != "/" and page.url contains item.url %}{% assign current = "true" %}{% endif %}
+      <li><a href="{{ item.url | relative_url }}"{% if current %} aria-current="{{ current }}"{% endif %}>{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
 </header>

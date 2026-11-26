@@ -1,7 +1,12 @@
-# News items, newest first. The Home page shows the latest three.
+# News and events, newest first. The Home page shows the latest three.
+#
 # date: YYYY-MM-DD
+# type: news, event, talk, paper, award   (default: news)
+# For events, also add:  place: "Room 101, Department of Mathematics"
+# link: optional web address for more details
 
 - date: 2026-11-25
+  type: news
   title: Lab website launched
   text: >-
     The Mathematical Physics & Biology Research Lab now has its own website.

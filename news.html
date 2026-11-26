@@ -1,17 +1,37 @@
 ---
 layout: page
-title: News
-lede: Papers, talks, awards and other updates from the lab.
+title: News and events
+lede: New papers, seminars, talks, awards and other updates from the lab.
 permalink: /news/
 ---
-<ol class="news-list">
-  {% for item in site.data.news %}
-  <li class="news-item">
-    <time datetime="{{ item.date }}">{{ item.date | date: "%-d %B %Y" }}</time>
-    <div>
-      <h2>{{ item.title }}</h2>
-      <p>{{ item.text }}</p>
-    </div>
-  </li>
-  {% endfor %}
-</ol>
+{% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign upcoming = "" | split: "" %}
+{% assign past = "" | split: "" %}
+{% for n in site.data.news %}
+  {% assign d = n.date | date: "%Y-%m-%d" %}
+  {% if n.type == "event" and d >= today %}
+    {% assign upcoming = upcoming | push: n %}
+  {% else %}
+    {% assign past = past | push: n %}
+  {% endif %}
+{% endfor %}
+
+{% if upcoming.size > 0 %}
+<section aria-labelledby="h-upcoming">
+  <h2 id="h-upcoming">Upcoming events</h2>
+  <ol class="news-list">
+    {% assign upcoming = upcoming | sort: "date" %}
+    {% for item in upcoming %}{% include news-item.html item=item %}{% endfor %}
+  </ol>
+</section>
+{% endif %}
+
+{% assign by_year = past | group_by_exp: "n", "n.date | date: '%Y'" %}
+{% for y in by_year %}
+<section aria-labelledby="h-{{ y.name }}">
+  <h2 id="h-{{ y.name }}">{{ y.name }}</h2>
+  <ol class="news-list">
+    {% for item in y.items %}{% include news-item.html item=item %}{% endfor %}
+  </ol>
+</section>
+{% endfor %}

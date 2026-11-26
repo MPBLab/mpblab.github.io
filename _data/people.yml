@@ -1,25 +1,41 @@
 # Lab members shown on the People page.
 #
-# To add someone, copy an entry and change the details.
 # photo: put the image in assets/img/people/ and write its file name here,
 #        e.g. photo: hafez.jpg   (leave empty to show initials instead)
 # links: any of email, scholar, researchgate, orcid, website (all optional)
+# Lists left empty ([]) are hidden on the site.
 
 leader:
   name: Prof. Dr. Md. Golam Hafez
   initials: GH
-  role: Principal investigator
+  role: Lab leader
   title: Professor, Department of Mathematics, CUET
   photo: ""
+  summary: >-
+    Works on nonlinear wave dynamics in plasmas and the evolution equations
+    that describe them.
   bio: >-
     Prof. Dr. Md. Golam Hafez is a Professor in the Department of Mathematics
     at Chittagong University of Engineering & Technology (CUET), Bangladesh.
     His research focuses on nonlinear wave dynamics in plasmas, including
     ion-acoustic and positron-acoustic waves in relativistic and nonextensive
     plasmas, studied through Burgers, Korteweg–de Vries and
-    Kadomtsev–Petviashvili type equations. He serves as a Review Editor for
-    the Mathematics of Computation and Data Science section of Frontiers in
-    Applied Mathematics and Statistics.
+    Kadomtsev–Petviashvili type equations.
+  interests:
+    - Nonlinear waves in plasmas
+    - Solitary waves and shock waves
+    - Burgers, KdV and KP type equations
+    - Mathematical modelling
+  # Example: - years: "2020–present"
+  #            text: "Professor, Department of Mathematics, CUET"
+  positions: []
+  # Example: - degree: "PhD in Mathematics"
+  #            place: "University name"
+  #            year: "2015"
+  education: []
+  service:
+    - "Review Editor, Mathematics of Computation and Data Science section, Frontiers in Applied Mathematics and Statistics"
+  awards: []
   links:
     email: ""
     scholar: ""
@@ -34,16 +50,25 @@ groups:
     members: []
   - name: Undergraduate students
     members: []
-  - name: Alumni
-    members: []
+
+# Former members: name, degree, year, and where they went next (optional).
+alumni: []
 
 # Example member (copy into a group's members list above):
 #
 #    members:
 #      - name: Jane Doe
 #        initials: JD
-#        title: PhD student
+#        title: PhD student (since 2025)
 #        topic: Solitary waves in dusty plasmas
 #        photo: ""
 #        links:
 #          email: jane@example.com
+#
+# Example alumnus:
+#
+# alumni:
+#   - name: John Doe
+#     degree: MSc
+#     year: 2024
+#     now: Lecturer, Example University

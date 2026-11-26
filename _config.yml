@@ -11,6 +11,7 @@ description: >-
   Prof. Dr. Md. Golam Hafez, Department of Mathematics, CUET, Bangladesh.
 
 leader: "Prof. Dr. Md. Golam Hafez"
+leader_page: "/people/hafez/"
 department: "Department of Mathematics"
 institution: "Chittagong University of Engineering & Technology (CUET)"
 institution_short: "CUET"
@@ -33,7 +34,23 @@ url: "https://mpblab.github.io"
 baseurl: ""
 
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
 permalink: pretty
+
+# Research area pages live in the _research folder (one file per area).
+collections:
+  research:
+    output: true
+    permalink: /research/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: research-area
+      math: true
 
 exclude:
   - README.md

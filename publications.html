@@ -1,29 +1,35 @@
 ---
 layout: page
 title: Publications
-lede: Journal articles and conference papers by lab members, newest first.
+lede: Journal articles, conference papers and theses by members of the lab.
 permalink: /publications/
 ---
 {% assign pubs = site.data.publications %}
 {% if pubs and pubs.size > 0 %}
+<div class="pub-tools" data-pub-tools>
+  <div class="pub-filter" role="group" aria-label="Filter by topic">
+    <button type="button" data-topic="" aria-pressed="true">All topics</button>
+    {% for t in site.data.topics %}
+    <button type="button" data-topic="{{ t.id }}" aria-pressed="false">{{ t.name }}</button>
+    {% endfor %}
+  </div>
+  <label class="visually-hidden" for="pub-search">Search publications</label>
+  <input id="pub-search" class="pub-search" type="search" placeholder="Search by title, author or journal">
+</div>
+<p class="pub-count" data-pub-count aria-live="polite">{{ pubs.size }} publications</p>
+
 {% assign by_year = pubs | group_by: "year" | sort: "name" | reverse %}
 {% for year in by_year %}
-<section class="pub-year" aria-labelledby="year-{{ year.name }}">
-  <h2 id="year-{{ year.name }}">{{ year.name }}</h2>
+<section class="pub-year" aria-labelledby="y-{{ year.name }}">
+  <h2 id="y-{{ year.name }}">{{ year.name }}</h2>
   <ol class="pubs">
-    {% for p in year.items %}
-    <li class="pub{% if p.field %} pub--{{ p.field }}{% endif %}">
-      <p class="pub__title">{% if p.doi %}<a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
-      <p class="pub__authors">{{ p.authors }}</p>
-      <p class="pub__venue">{% if p.journal %}<cite>{{ p.journal }}</cite>{% endif %}{% if p.volume %} {{ p.volume }}{% endif %}{% if p.pages %}, {{ p.pages }}{% endif %} ({{ p.year }})</p>
-    </li>
-    {% endfor %}
+    {% for p in year.items %}{% include publication.html p=p %}{% endfor %}
   </ol>
 </section>
 {% endfor %}
 {% else %}
 <p class="empty">
   The publication list is being prepared.
-  {% if site.links.google_scholar != "" %}Until it is ready, see the lab's papers on <a href="{{ site.links.google_scholar }}">Google Scholar</a>.{% endif %}
+  {% if site.links.google_scholar != "" %}In the meantime, see the lab's papers on <a href="{{ site.links.google_scholar }}">Google Scholar</a>.{% endif %}
 </p>
 {% endif %}

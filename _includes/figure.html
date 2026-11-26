@@ -1,0 +1,4 @@
+<figure class="fig{% if include.class %} {{ include.class }}{% endif %}">
+  {% include figures/{{ include.svg }}.svg %}
+  <figcaption><span class="fig__num">Figure {{ include.number | default: 1 }}.</span> {{ include.caption }}</figcaption>
+</figure>

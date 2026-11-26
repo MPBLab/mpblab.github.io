@@ -1,19 +1,18 @@
 {% assign p = include.person %}
-<article class="person{% if include.large %} person--large{% endif %}">
+<article class="person">
   {% if p.photo and p.photo != "" %}
   <img class="person__photo" src="{{ '/assets/img/people/' | append: p.photo | relative_url }}" alt="Photo of {{ p.name }}" loading="lazy">
   {% else %}
   <div class="person__photo person__photo--initials" aria-hidden="true">{{ p.initials }}</div>
   {% endif %}
   <div class="person__body">
-    <h3 class="person__name">{{ p.name }}</h3>
-    {% if p.role %}<p class="person__role">{{ p.role }}</p>{% endif %}
-    {% if p.title %}<p class="person__title">{{ p.title }}</p>{% endif %}
-    {% if p.topic %}<p class="person__topic">{{ p.topic }}</p>{% endif %}
-    {% if include.large and p.bio %}<p class="person__bio">{{ p.bio }}</p>{% endif %}
+    <h3 class="person__name">{% if include.link %}<a href="{{ include.link | relative_url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</h3>
+    {% if p.title %}<p class="person__meta">{{ p.title }}</p>{% endif %}
+    {% if p.topic %}<p class="person__meta"><i>{{ p.topic }}</i></p>{% endif %}
+    {% if p.summary %}<p class="person__summary">{{ p.summary }}</p>{% endif %}
     {% assign l = p.links %}
     {% if l %}
-    <ul class="person__links">
+    <ul class="inline-links">
       {% if l.email and l.email != "" %}<li><a href="mailto:{{ l.email }}">Email</a></li>{% endif %}
       {% if l.scholar and l.scholar != "" %}<li><a href="{{ l.scholar }}">Google Scholar</a></li>{% endif %}
       {% if l.researchgate and l.researchgate != "" %}<li><a href="{{ l.researchgate }}">ResearchGate</a></li>{% endif %}
