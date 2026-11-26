@@ -1,0 +1,53 @@
+{% comment %}
+  Extra structured data (schema.org) that helps Google and Bing understand
+  the lab and its leader. Built from _config.yml and _data/people.yml.
+{% endcomment %}
+{% assign leader = site.data.people.leader %}
+{% capture same_as %}{% for l in site.social.links %}"{{ l }}"{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": {{ site.title | jsonify }},
+  "alternateName": {{ site.short_name | jsonify }},
+  "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+  "logo": {{ site.logo | absolute_url | jsonify }},
+  "description": {{ site.description | strip_newlines | strip | jsonify }},
+  {% if site.email != "" %}"email": {{ site.email | jsonify }},{% endif %}
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chattogram",
+    "postalCode": "4349",
+    "addressCountry": "BD"
+  },
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "Chittagong University of Engineering & Technology",
+    "alternateName": "CUET"
+  },
+  "founder": { "@type": "Person", "name": {{ leader.name | jsonify }}, "url": {{ site.leader_page | absolute_url | jsonify }} },
+  "knowsAbout": ["Nonlinear waves in plasmas", "Solitary waves", "Shock waves", "Korteweg-de Vries equation", "Burgers equation", "Kadomtsev-Petviashvili equation", "Mathematical biology"],
+  "sameAs": [{{ same_as }}]
+}
+</script>
+{% elsif page.url == site.leader_page %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ leader.name | jsonify }},
+  "honorificPrefix": "Prof. Dr.",
+  "jobTitle": "Professor of Mathematics",
+  "url": {{ page.url | absolute_url | jsonify }},
+  {% if leader.photo != "" %}"image": {{ '/assets/img/people/' | append: leader.photo | absolute_url | jsonify }},{% endif %}
+  "worksFor": [
+    { "@type": "CollegeOrUniversity", "name": "Chittagong University of Engineering & Technology", "alternateName": "CUET" },
+    { "@type": "ResearchOrganization", "name": {{ site.title | jsonify }}, "url": {{ site.url | append: "/" | jsonify }} }
+  ],
+  {% assign plist = "" | split: "" %}{% for k in leader.links %}{% if k[1] != "" and k[0] != "email" %}{% assign plist = plist | push: k[1] %}{% endif %}{% endfor %}
+  "sameAs": {{ plist | jsonify }},
+  "knowsAbout": {{ leader.interests | jsonify }}
+}
+</script>
+{% endif %}

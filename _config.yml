@@ -33,6 +33,28 @@ links:
 url: "https://mpblab.github.io"
 baseurl: ""
 
+# ---------- Search engines ----------
+# Shown after the lab name in the home page title in search results.
+tagline: "Department of Mathematics, CUET, Bangladesh"
+lang: en_US
+logo: /assets/img/logo.png
+image: /assets/img/share.png
+social:
+  name: "Mathematical Physics & Biology Research Lab"
+  links:
+    - "https://github.com/MPBLab"
+
+# Verification codes from Google Search Console and Bing Webmaster Tools.
+# To use: remove the # in front of the three lines below and paste each code
+# (only the part inside content="...").
+# webmaster_verifications:
+#   google: "PASTE-GOOGLE-CODE-HERE"
+#   bing: "PASTE-BING-CODE-HERE"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 markdown: kramdown
 kramdown:
   math_engine: mathjax
@@ -47,10 +69,16 @@ collections:
 defaults:
   - scope:
       path: ""
+    values:
+      image: /assets/img/share.png
+  - scope:
+      path: ""
       type: research
     values:
       layout: research-area
       math: true
+      seo:
+        type: WebPage
 
 exclude:
   - README.md

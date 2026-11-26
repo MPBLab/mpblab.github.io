@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About the lab
+description: "About the Mathematical Physics & Biology Research Lab (MPB Lab), Department of Mathematics, CUET, Bangladesh, led by Prof. Dr. Md. Golam Hafez."
 lede: >-
   The Mathematical Physics & Biology Research Lab (MPB Lab) is a research group
   in the Department of Mathematics at CUET, led by Prof. Dr. Md. Golam Hafez.
