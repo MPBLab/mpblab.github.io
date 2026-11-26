@@ -12,7 +12,7 @@ layout: default
     <h2 id="related-heading">Publications on this topic</h2>
     {% if pubs.size > 0 %}
     <ol class="pubs">
-      {% assign sorted = pubs | sort: "year" | reverse %}
+      {% assign sorted = pubs | sort: "date" | reverse %}
       {% for p in sorted %}{% include publication.html p=p %}{% endfor %}
     </ol>
     {% else %}

@@ -17,3 +17,6 @@
 - id: control-systems
   name: Control and machine learning
   field: other
+- id: fluid-dynamics
+  name: Fluid dynamics and MHD
+  field: physics

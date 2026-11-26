@@ -68,7 +68,7 @@ permalink: /people/hafez/
 
 <section aria-labelledby="h-pubs">
   <h2 id="h-pubs">Recent publications</h2>
-  {% assign pubs = site.data.publications | sort: "year" | reverse %}
+  {% assign pubs = site.data.publications | sort: "date" | reverse %}
   {% if pubs.size > 0 %}
   <ol class="pubs">{% for x in pubs limit:5 %}{% include publication.html p=x %}{% endfor %}</ol>
   <p><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
