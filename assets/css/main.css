@@ -86,9 +86,9 @@ a:hover { text-decoration: underline; text-underline-offset: 0.18em; }
 .brand__mark { display: block; width: auto; height: 60px; }
 @media (max-width: 600px) { .brand__mark { height: 50px; } }
 .brand__name { font-family: "Montserrat", var(--sans); font-weight: 700; font-size: 1.45rem; letter-spacing: -0.01em; line-height: 1.1; }
-.brand__mpb { color: #1d3f8f; }
-.brand__lab { color: #2a9fd6; }
-.brand__full { font-family: var(--sans); font-size: 0.82rem; color: #1d3f8f; margin-top: 0.1rem; }
+.brand__mpb { color: #213f70; }
+.brand__lab { color: #258bd6; }
+.brand__full { font-family: var(--sans); font-size: 0.82rem; color: #34445b; margin-top: 0.1rem; }
 
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.2rem 1.5rem; }
 .site-nav a { color: var(--ink); font-family: var(--sans); font-size: 1rem; padding: 0.35rem 0; border-bottom: 2px solid transparent; }
@@ -295,7 +295,7 @@ a:hover { text-decoration: underline; text-underline-offset: 0.18em; }
 .contact-grid h2 { margin-top: 0; font-size: 1.25rem; }
 .contact-grid address { font-style: normal; }
 .about-logo { margin: 0 0 2rem; }
-.about-logo img { display: block; width: min(100%, 26rem); height: auto; }
+.about-logo img { display: block; width: min(100%, 30rem); height: auto; }
 
 /* ---------- Footer ---------- */
 
