@@ -5,6 +5,10 @@
 #           date (YYYY-MM-DD, used to order papers within a year), doi, url, type, topic
 #   type:  journal, conference, book, chapter, thesis   (default: journal)
 #   topic: one of the ids in _data/topics.yml
+#
+# Math: write LaTeX between $...$ (inline) or $$...$$ (displayed), and put
+# that text in SINGLE quotes, e.g.  title: 'Solitons in $\kappa$-distributed plasmas'
+# A real dollar sign is written \$.
 #          (the paper then also appears on that research page)
 #
 # Example:

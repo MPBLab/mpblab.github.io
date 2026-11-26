@@ -52,6 +52,51 @@ top showing the format.
 - Equations are written in LaTeX: `$$ u_t + 6uu_x + u_{xxx} = 0 $$` in the
   research pages.
 
+### Writing mathematics (LaTeX)
+
+LaTeX is typeset automatically on every page: in research pages, paper
+titles, news, biographies, anywhere. Pages without math load nothing extra.
+
+| Where you write | Inline math | Displayed equation |
+|---|---|---|
+| `.yml` data files (publications, news, people) | `$\kappa$` or `\( \kappa \)` | `$$ ... $$` or `\[ ... \]` |
+| `.md` pages (about, research) | `$$\kappa$$` (recommended) or `$\kappa$` | `$$ ... $$` on its own lines |
+| `.html` pages | `$\kappa$` or `\( \kappa \)` | `$$ ... $$` or `\[ ... \]` |
+
+`\begin{equation}`, `\begin{align}`, `\begin{aligned}`, `\frac`, `\sqrt`,
+matrices, Greek letters and most of standard LaTeX math work.
+
+**Two rules to remember**
+
+1. **In `.yml` files, put text containing LaTeX in single quotes** so the
+   backslashes are kept:
+
+   ```yaml
+   - title: 'Ion-acoustic solitons in $\kappa$-distributed plasmas'
+   ```
+
+   (With double quotes you would have to write every backslash twice: `"$\\kappa$"`.)
+   If the text itself contains a single quote, write it twice: `'Venus'' ionosphere'`.
+
+2. **A real dollar sign** (e.g. a fee) is written `\$`, as in `\$50`.
+
+**Shortcuts available everywhere**
+
+| Write | Means |
+|---|---|
+| `\R`, `\C`, `\N`, `\Z`, `\Q` | ℝ, ℂ, ℕ, ℤ, ℚ |
+| `\sech`, `\csch`, `\arctanh`, `\sgn` | sech, csch, arctanh, sgn |
+| `\dd x` | upright d, as in ∫ f dx |
+| `\pd{u}{t}` | ∂u/∂t |
+| `\od{y}{x}` | dy/dx |
+| `\abs{x}`, `\norm{x}`, `\vect{v}` | \|x\|, ‖x‖, bold **v** |
+
+To add more shortcuts, edit the `MACROS` list at the top of `assets/js/math.js`.
+
+Visitors who copy an equation from the site get its LaTeX source.
+To show LaTeX code without typesetting it, wrap it in `<code>` or in an
+element with `class="no-math"`.
+
 ### Visitor statistics
 
 The site can count visitors with [GoatCounter](https://www.goatcounter.com)

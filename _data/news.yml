@@ -4,6 +4,10 @@
 # type: news, event, talk, paper, award   (default: news)
 # For events, also add:  place: "Room 101, Department of Mathematics"
 # link: optional web address for more details
+#
+# Math: write LaTeX between $...$ (inline) or $$...$$ (displayed), and put
+# that text in SINGLE quotes, e.g.  title: 'Solitons in $\kappa$-distributed plasmas'
+# A real dollar sign is written \$.
 
 - date: 2026-11-26
   type: paper

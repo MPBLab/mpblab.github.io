@@ -4,6 +4,10 @@
 #        e.g. photo: hafez.jpg   (leave empty to show initials instead)
 # links: any of email, scholar, researchgate, orcid, website (all optional)
 # Lists left empty ([]) are hidden on the site.
+#
+# Math: write LaTeX between $...$ (inline) or $$...$$ (displayed), and put
+# that text in SINGLE quotes, e.g.  title: 'Solitons in $\kappa$-distributed plasmas'
+# A real dollar sign is written \$.
 
 leader:
   name: Prof. Dr. Md. Golam Hafez
