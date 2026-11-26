@@ -62,7 +62,7 @@ social:
 #                (statistics at https://CODE.goatcounter.com)
 #   google:      a Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ"
 analytics:
-  goatcounter: ""
+  goatcounter: "mpblab"
   google: ""
 
 plugins:
