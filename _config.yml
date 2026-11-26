@@ -56,6 +56,15 @@ social:
 #   google: "PASTE-GOOGLE-CODE-HERE"
 #   bing: "PASTE-BING-CODE-HERE"
 
+# ---------- Visitor statistics ----------
+# Fill in one (or both) to start counting visitors. Leave empty to turn off.
+#   goatcounter: the code you chose at goatcounter.com, e.g. "mpblab"
+#                (statistics at https://CODE.goatcounter.com)
+#   google:      a Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ"
+analytics:
+  goatcounter: ""
+  google: ""
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag

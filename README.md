@@ -52,6 +52,20 @@ top showing the format.
 - Equations are written in LaTeX: `$$ u_t + 6uu_x + u_{xxx} = 0 $$` in the
   research pages.
 
+### Visitor statistics
+
+The site can count visitors with [GoatCounter](https://www.goatcounter.com)
+(free, simple, no cookie banner needed) and/or Google Analytics 4. Sign up,
+then put your code in `_config.yml` under `analytics:`:
+
+```yaml
+analytics:
+  goatcounter: "mpblab"        # your GoatCounter code
+  google: "G-XXXXXXXXXX"       # your Google Analytics measurement ID
+```
+
+Leave a value empty to turn that service off.
+
 ### Adding a photo
 
 1. Open `assets/img/people/` on GitHub and click **Add file → Upload files**.
