@@ -384,6 +384,9 @@
   doi: "10.3329/jsr.v17i2.75751"
   type: "journal"
   topic: "fluid-dynamics"
+  image: "fig-jsr-2025-mhd-nanofluid.webp"
+  image_alt: "Velocity profiles of the nanofluid flow for different values of the parameter E"
+  image_credit: "Fig. 1 from the paper. © The Authors, CC BY-SA 4.0."
 
 - title: "Burgers equation with cubic and quartic nonlinearity: dynamics of heavy ion-acoustic coherent structures in unmagnetized strongly coupled plasma"
   authors: "M. N. Islam, M. G. Hafez, U. K. Deb"
