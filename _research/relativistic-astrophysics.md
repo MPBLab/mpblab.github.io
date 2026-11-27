@@ -12,6 +12,9 @@ points:
   - Equations of state that bridge neutron stars and gravastars
   - Slow rotation (Hartle–Thorne), tidal Love numbers and deformability
   - Matching models to observed masses and radii, such as NICER data
+blurb: >-
+  Models of neutron stars and gravastars in general relativity, tested against observations.
+anim_caption: "Orbits around a compact star precess because space is curved."
 ---
 
 Neutron stars and other compact objects are so dense that Newtonian gravity

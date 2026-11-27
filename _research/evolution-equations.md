@@ -12,6 +12,9 @@ points:
   - Deriving Burgers, KdV and Kadomtsev–Petviashvili type equations
   - Exact travelling-wave, soliton and shock solutions
   - Fractional evolution equations and higher-dimensional systems such as Davey–Stewartson
+blurb: >-
+  Deriving Korteweg–de Vries, Burgers and Kadomtsev–Petviashvili type equations, and finding their soliton and shock solutions.
+anim_caption: "Burgers equation: a smooth wave (dashed) steepens into a shock."
 ---
 
 Many different physical systems reduce, in the right limit, to a small family

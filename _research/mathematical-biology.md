@@ -15,6 +15,9 @@ points:
   - Fractional and fractal-fractional models fitted to data
   - Neuronal dynamics with Hodgkin–Huxley type models
   - Thresholds, stability and the effect of interventions
+blurb: >-
+  Models of how COVID-19, dengue and tuberculosis spread in Bangladesh, and of how neurons fire.
+anim_caption: "An epidemic spreading through a population: susceptible, infected, recovered."
 ---
 
 Living systems change over time: infections spread through a community,

@@ -11,6 +11,9 @@ points:
   - Neural Lyapunov functions for variable fractional-order systems
   - Nonlinear model predictive control with deep networks and LMI constraints
   - Secured state estimation and tracking control under deception attacks
+blurb: >-
+  Keeping nonlinear and fractional-order systems stable using Lyapunov theory and neural networks.
+anim_caption: "Controlled trajectories settle to equilibrium across Lyapunov level sets."
 ---
 
 Many engineered and natural systems are nonlinear and have memory. Keeping

@@ -13,6 +13,9 @@ points:
   - Waves in the upper ionosphere of Venus
   - Collisions of multi-solitons, lump waves and rogue waves
   - Relativistic plasmas and nonextensive or (r,q)-distributed electrons
+blurb: >-
+  Solitary waves, shocks and rogue waves in plasmas, from the ionosphere of Venus to dusty and relativistic plasmas.
+anim_caption: "Two KdV solitons collide and pass through each other unchanged."
 ---
 
 A plasma is a gas in which many atoms have lost electrons, leaving a mixture

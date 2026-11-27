@@ -3,99 +3,29 @@ layout: page
 title: Research
 description: "Research at MPB Lab, CUET: nonlinear waves in plasmas, nonlinear evolution equations, mathematical biology, relativistic astrophysics, control and machine learning, and fluid dynamics."
 lede: >-
-  We build mathematical models of physical and living systems, derive the
-  nonlinear equations that govern them, and solve those equations analytically
-  and numerically.
+  Six connected fields, one toolkit: nonlinear differential equations, solved
+  analytically and numerically.
 permalink: /research/
 ---
 {% assign areas = site.research | sort: "order" %}
-{% assign allpubs = site.data.publications | sort: "date" | reverse %}
-
-<nav class="area-index" aria-label="Research areas">
-  <ol>
-    {% for a in areas %}
-    {% assign n = site.data.publications | where: "topic", a.slug %}
-    <li class="field--{{ a.field }}">
-      <a href="#{{ a.slug }}">
-        <span class="area-index__name">{{ a.title }}</span>
-        <span class="area-index__count">{{ n.size }} paper{% if n.size != 1 %}s{% endif %}</span>
-      </a>
-    </li>
-    {% endfor %}
-  </ol>
-</nav>
-
-{% for a in areas %}
-{% assign tp = allpubs | where: "topic", a.slug %}
-<section class="theme field--{{ a.field }}{% cycle '', ' theme--flip' %}" id="{{ a.slug }}" aria-labelledby="t-{{ a.slug }}">
-  <div class="theme__visual">
-    <a class="theme__figure" href="{{ a.url | relative_url }}" tabindex="-1" aria-hidden="true">
-      <img src="{{ '/assets/img/pubs/topic-' | append: a.slug | append: '.webp' | relative_url }}" alt="" width="800" height="500" loading="lazy">
+<div class="fields">
+  {% for a in areas %}
+  {% assign n = site.data.publications | where: "topic", a.slug %}
+  <article class="field-tile field--{{ a.field }}" id="{{ a.slug }}">
+    <a class="field-tile__stage" href="{{ a.url | relative_url }}" tabindex="-1" aria-hidden="true">
+      <canvas data-anim="{{ a.slug }}"></canvas>
+      {% if a.anim_caption %}<span class="field-tile__caption">{{ a.anim_caption }}</span>{% endif %}
     </a>
-    {% if a.equation %}
-    <figure class="theme__equation">
-      <div class="theme__eq">\[ {{ a.equation | escape }} \]</div>
-      <figcaption>{{ a.equation_name }}</figcaption>
-    </figure>
-    {% endif %}
-  </div>
-
-  <div class="theme__text">
-    <h2 id="t-{{ a.slug }}" class="theme__title"><a href="{{ a.url | relative_url }}">{{ a.title }}</a></h2>
-    <p class="theme__summary">{{ a.summary }}</p>
-
-    {% if a.points %}
-    <ul class="theme__points">
-      {% for pt in a.points %}<li>{{ pt }}</li>{% endfor %}
-    </ul>
-    {% endif %}
-
-    {% comment %} People who published in this area {% endcomment %}
-    {% assign people = "" | split: "" %}
-    {% for m in site.data.members %}
-      {% assign hit = false %}
-      {% for p in tp %}
-        {% assign names = p.authors | split: ", " %}
-        {% for nm in names %}{% assign who = nm | strip %}{% if m.aliases contains who %}{% assign hit = true %}{% break %}{% endif %}{% endfor %}
-        {% if hit %}{% break %}{% endif %}
-      {% endfor %}
-      {% if hit %}{% assign people = people | push: m %}{% endif %}
-    {% endfor %}
-    {% if people.size > 0 %}
-    <div class="theme__people">
-      <h3 class="theme__label">People</h3>
-      <ul class="people-row">
-        {% for m in people %}
-        <li>
-          <a href="{{ '/members/' | relative_url }}#{{ m.id }}" class="people-row__item">
-            {% if m.photo and m.photo != "" %}<img class="avatar avatar--lg" src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" alt="" loading="lazy">
-            {% else %}{% assign parts = m.short | split: " " %}<span class="avatar avatar--lg avatar--{{ m.group }}" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>{% endif %}
-            <span class="people-row__name">{{ m.short | replace: "Prof. Dr. ", "" }}</span>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
+    <div class="field-tile__body">
+      <h2 class="field-tile__title"><a href="{{ a.url | relative_url }}">{{ a.title }}</a></h2>
+      <p class="field-tile__text">{{ a.blurb | default: a.summary }}</p>
+      <p class="field-tile__foot">
+        <a class="field-tile__more" href="{{ a.url | relative_url }}">Explore</a>
+        {% if n.size > 0 %}<a class="field-tile__count" href="{{ '/publications/' | relative_url }}?topic={{ a.slug }}">{{ n.size }} paper{% if n.size != 1 %}s{% endif %}</a>{% endif %}
+      </p>
     </div>
-    {% endif %}
+  </article>
+  {% endfor %}
+</div>
 
-    {% if tp.size > 0 %}
-    <div class="theme__recent">
-      <h3 class="theme__label">Recent papers</h3>
-      <ol class="recent-list">
-        {% for p in tp limit: 3 %}
-        <li>
-          <a href="{% if p.doi %}https://doi.org/{{ p.doi }}{% else %}{{ '/publications/' | relative_url }}{% endif %}">{{ p.title }}</a>
-          <span class="recent-list__venue"><cite>{{ p.journal }}</cite>, {{ p.year }}</span>
-        </li>
-        {% endfor %}
-      </ol>
-    </div>
-    {% endif %}
-
-    <p class="theme__links">
-      <a class="btn btn--primary" href="{{ a.url | relative_url }}">About this area</a>
-      {% if tp.size > 0 %}<a class="btn btn--quiet" href="{{ '/publications/' | relative_url }}?topic={{ a.slug }}">All {{ tp.size }} paper{% if tp.size != 1 %}s{% endif %}</a>{% endif %}
-    </p>
-  </div>
-</section>
-{% endfor %}
+<script src="{{ '/assets/js/research-anim.js' | relative_url }}" defer></script>

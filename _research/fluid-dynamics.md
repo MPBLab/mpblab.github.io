@@ -11,6 +11,9 @@ points:
   - MHD flow through highly porous media with ion-slip current and stratification
   - Soret and Dufour (thermo-diffusion) effects on heat and mass transfer
   - Unsteady stagnation-point nanofluid flow over stretching sheets
+blurb: >-
+  Magnetohydrodynamic and nanofluid flows with heat and mass transfer, solved numerically.
+anim_caption: "Tracer particles in a flow past a cylinder; brighter means faster."
 ---
 
 When an electrically conducting fluid moves through a magnetic field, the
