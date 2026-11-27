@@ -15,9 +15,12 @@
 {% endif %}
 {% capture pubjson %}{"title":{{ p.title | jsonify }},"authors":{{ p.authors | jsonify }},"journal":{{ p.journal | jsonify }},"volume":{{ p.volume | default: "" | jsonify }},"issue":{{ p.issue | default: "" | jsonify }},"pages":{{ p.pages | default: p.article | default: "" | jsonify }},"year":{{ p.year | jsonify }},"doi":{{ p.doi | default: "" | jsonify }},"type":{{ p.type | default: "journal" | jsonify }}}{% endcapture %}
 <article class="pub-card{% if include.feature %} pub-card--feature{% endif %}{% if t %} field--{{ t.field }}{% endif %}" data-pub-item data-topic="{{ p.topic }}" data-pub='{{ pubjson | strip | escape }}'>
-  <a class="pub-card__image" href="{% if p.doi %}https://doi.org/{{ p.doi }}{% else %}#{% endif %}" tabindex="-1" aria-hidden="true">
-    <img src="{{ img | relative_url }}" alt="{{ img_alt }}" loading="lazy">
-  </a>
+  <div class="pub-card__media">
+    <a class="pub-card__image{% if p.image and p.image != "" %} pub-card__image--figure{% endif %}" href="{% if p.doi %}https://doi.org/{{ p.doi }}{% else %}#{% endif %}" tabindex="-1" aria-hidden="true">
+      <img src="{{ img | relative_url }}" alt="{{ img_alt }}" loading="lazy">
+    </a>
+    {% if p.image_credit and p.image_credit != "" %}<p class="pub-card__credit">{{ p.image_credit }}</p>{% endif %}
+  </div>
   <div class="pub-card__body">
     <p class="pub-card__meta">{% if include.feature %}<span class="pub-card__label">Latest paper</span>{% endif %}{% if t %}<span class="tag">{{ t.name }}</span>{% endif %}</p>
     <h3 class="pub-card__title">{% if p.doi %}<a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% elsif p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>

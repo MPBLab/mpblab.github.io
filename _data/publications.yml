@@ -6,6 +6,8 @@
 #   type:  journal, conference, book, chapter, thesis   (default: journal)
 #   topic: one of the ids in _data/topics.yml
 #   image: a figure from the paper in assets/img/pubs/ (otherwise a topic illustration is shown)
+#   image_alt: short description of the figure; image_credit: figure number and licence
+#   Only use figures from open-access papers (e.g. CC BY) or with the publisher's permission.
 #   quartile: journal quartile, e.g. "Q1" (shown as a badge)
 #
 # Math: write LaTeX between $...$ (inline) or $$...$$ (displayed), and put
@@ -50,6 +52,9 @@
   doi: "10.1371/journal.pone.0362086"
   type: "journal"
   topic: "mathematical-biology"
+  image: "fig-plosone-2026-covid.webp"
+  image_alt: "Model simulation fitted to cumulative COVID-19 cases in Bangladesh"
+  image_credit: "Fig. 2 from the paper. © The Authors, CC BY 4.0."
 
 - title: "A Mathematical Model for COVID‐19 Severity and Lung Cancer Coinfection: Analysis of Threshold Behavior"
   authors: "M. T. H. Rayhan, M. J. Islam, M. G. Hafez"
@@ -74,6 +79,9 @@
   doi: "10.53799/4hgatn90"
   type: "journal"
   topic: "mathematical-biology"
+  image: "fig-ajse-2026-dengue.webp"
+  image_alt: "Compartmental diagram of dengue transmission between humans and mosquitoes"
+  image_credit: "Fig. 1 from the paper. © The Authors, CC BY-NC-ND 4.0."
 
 - title: "Head-on collisions of multi-solitons and lump waves in a dusty plasma with (r,q)-distributed electrons"
   authors: "Salena Akther, Md. Golam Hafez"
@@ -107,6 +115,9 @@
   doi: "10.1038/s41598-026-57659-z"
   type: "journal"
   topic: "plasma-waves"
+  image: "fig-scirep-2026-dusty-plasma.webp"
+  image_alt: "Three-dimensional and contour plots of periodic dust-acoustic waves"
+  image_credit: "Fig. 5 from the paper. © The Authors, CC BY-NC-ND 4.0."
 
 - title: "Incorporating Deep Neural Networks with LMI Constraints for Nonlinear Model Predictive Control Optimization"
   authors: "Sayed Allamah Iqbal, Md. Golam Hafez, Asaduzzaman"
@@ -288,6 +299,9 @@
   doi: "10.1016/j.padiff.2025.101277"
   type: "journal"
   topic: "plasma-waves"
+  image: "fig-padiff-2025-overtaking-solitons.webp"
+  image_alt: "Overtaking collisions of ion-acoustic multi-solitons"
+  image_credit: "Fig. 1 from the paper. © The Authors, CC BY-NC-ND 4.0."
 
 - title: "Ion-acoustic wave propagation with Bohm quantum potential near and at supercritical values in degenerate plasmas"
   authors: "M. M. Sarkar, S. Barua, M. G. Hafez"
@@ -323,6 +337,9 @@
   doi: "10.1016/j.padiff.2025.101158"
   type: "journal"
   topic: "fluid-dynamics"
+  image: "fig-padiff-2025-mhd-flow.webp"
+  image_alt: "Physical configuration of the MHD flow through a porous medium"
+  image_credit: "Fig. 1 from the paper. © The Authors, CC BY-NC-ND 4.0."
 
 - title: "Dynamics of Ion-Acoustic Soliton Propagation Near the Super-Critical Values in Relativistic Magnetized Plasmas"
   authors: "Sagar Barua, M. G. Hafez, Md. Obaidur Rahman"
@@ -346,6 +363,9 @@
   doi: "10.1016/j.aej.2025.03.036"
   type: "journal"
   topic: "plasma-waves"
+  image: "fig-aej-2025-lump-soliton.webp"
+  image_alt: "Lump soliton profile and its contour plot"
+  image_credit: "Fig. 6 from the paper. © The Authors, CC BY-NC-ND 4.0."
 
 - title: "Thermo Diffusion Effects on MHD Unsteady Stagnation Point Nano Fluid Flow over an Exponentially Porous Stretching Sheet"
   authors: "R. Akter, M. D. Hossain, M. A. Islam, M. G. Hafez"
