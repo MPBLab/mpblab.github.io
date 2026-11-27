@@ -166,6 +166,9 @@
   doi: "10.1140/epjc/s10052-026-15465-x"
   type: "journal"
   topic: "relativistic-astrophysics"
+  image: "fig-epjc-2026-gravastar.webp"
+  image_alt: "Anisotropy factor inside the gravastar model for different parameter values"
+  image_credit: "Fig. 4 from the paper. © The Authors, CC BY 4.0."
 
 - title: "Analyzing Tuberculosis Transmission in Bangladesh: Modified SEIHR Framework With Non‐Monotone Incidence, Pseudo‐Recovery, and Treatment Default Mechanisms"
   authors: "Fahmida Akter Prema, Md. Jahidul Islam, Md. Golam Hafez"
@@ -288,6 +291,9 @@
   doi: "10.1007/s11038-025-09569-9"
   type: "journal"
   topic: "evolution-equations"
+  image: "fig-discover-space-2025-kp-solitons.webp"
+  image_alt: "Three-dimensional and contour plots of colliding KP multi-solitons"
+  image_credit: "Fig. 10 from the paper. © The Authors, CC BY-NC-ND 4.0."
 
 - title: "A comparative study on overtaking collisional ion-acoustic multi-soliton around the critical values in the sense of fractal and fractional differential operators"
   authors: "Salena Akther, M. G. Hafez, Shahrina Akter"
