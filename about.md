@@ -8,7 +8,7 @@ lede: >-
 permalink: /about/
 ---
 <figure class="about-logo">
-  <img src="{{ '/assets/img/logo/mpblab-logo.png' | relative_url }}" width="700" height="473" alt="MPB Lab logo: Mathematical Physics & Biology Research Lab">
+  <img src="{{ '/assets/img/logo/mpblab-logo-stacked.svg' | relative_url }}" width="751" height="542" alt="MPB Lab logo: a Lorenz-attractor butterfly above the name Mathematical Physics & Biology Research Lab">
 </figure>
 
 <div class="prose" markdown="1">

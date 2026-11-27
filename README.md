@@ -193,8 +193,8 @@ Then open <http://localhost:4000>.
 
 ## Credits
 
-- Logo: designed by the lab. Files are in `assets/img/logo/` (header emblem, full logo, icons); `assets/img/logo.png` and `assets/img/share.jpg` are the versions used by search engines and link previews.
-- Wordmark font: Montserrat, SIL Open Font License (`assets/fonts/OFL-Montserrat.txt`).
+- Logo: a Lorenz-attractor butterfly (the trajectory and its mirror image, computed from the Lorenz equations) in teal `#0E7C7B` and coral `#F26B4F`, with the name in ink `#0B2A33`. Vector masters are in `assets/img/logo/`: `mpblab-logo.svg` (full, horizontal), `mpblab-logo-compact.svg` (header), `mpblab-logo-stacked.svg` (posters, About page), `mpblab-mark.svg` (symbol only), each with a `-white` version for dark backgrounds, plus the favicon and app icons. `/favicon.ico`, `/site.webmanifest`, `assets/img/logo.png` and `assets/img/share.jpg` are the versions used by browsers, search engines and link previews.
+- Logo fonts: Gloock (name, converted to outlines in the SVG files) and Bricolage Grotesque (tagline; `assets/fonts/OFL-Bricolage-Grotesque.txt`), both SIL Open Font License.
 
 - Typeface: TeX Gyre Pagella (Palatino-style), GUST Font License (`assets/fonts/LICENSE-TeX-Gyre-Pagella.txt`).
 - Equations: [KaTeX](https://katex.org), MIT License (`assets/vendor/katex/LICENSE`).
