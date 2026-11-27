@@ -96,6 +96,9 @@
   doi: "10.1016/j.hedp.2026.101295"
   type: "journal"
   topic: "plasma-waves"
+  image: "fig-hedp-2026-head-on-collisions.webp"
+  image_alt: "Head-on collisions of multi-solitons and lump waves: three-dimensional and contour plots"
+  image_credit: "Fig. 2 from the paper. © Elsevier; reproduced by the authors."
 
 - title: "Deep neural networks based neural Lyapunov control design for stability of variable fractional-order systems"
   authors: "Sayed Allamah Iqbal, Md. Golam Hafez, Rathinasamy Sakthivel, Shanmugam Harshavarthini, Asaduzzaman"
@@ -259,6 +262,9 @@
   doi: "10.1007/s12648-025-03846-z"
   type: "journal"
   topic: "plasma-waves"
+  image: "fig-ijp-2026-lump-soliton.webp"
+  image_alt: "Lump soliton profiles and their contour maps in a rotating magnetized plasma"
+  image_credit: "Fig. 5 from the paper. © Indian Association for the Cultivation of Science, published by Springer Nature; reproduced by the authors."
 
 # ---------- 2025 (checked against Crossref and OpenAlex) ----------
 
@@ -273,6 +279,9 @@
   doi: "10.1088/1402-4896/ae1e40"
   type: "journal"
   topic: "plasma-waves"
+  image: "fig-ps-2025-breather-solitons.webp"
+  image_alt: "Breather solitons in a (3+1)-dimensional magnetized plasma: surface and contour plots"
+  image_credit: "Fig. 5 from the paper. © IOP Publishing; reproduced by the authors."
 
 - title: "A Stable Gravastar-inspired Interior from Exact Einstein Solutions: Compactness, Redshift Surfaces, and Observational Matching with NICER Data"
   authors: "M. I. H. Sakib, M. A. Kauser, M. G. Hafez"
@@ -285,6 +294,9 @@
   doi: "10.1007/s10773-025-06163-7"
   type: "journal"
   topic: "relativistic-astrophysics"
+  image: "fig-ijtp-2025-gravastar-mass-radius.webp"
+  image_alt: "Mass-radius curves of the gravastar-inspired model compared with NICER observations"
+  image_credit: "Fig. 9 from the paper. © Springer Nature; reproduced by the authors."
 
 - title: "KP, MKP and G-KP soliton and overtaking collision among multi-soliton propagation in an unmagnetized (2 + 1)-dimensional collisionless plasma environment"
   authors: "Salena Akther, Md. Golam Hafez"
@@ -405,6 +417,9 @@
   doi: "10.1088/1402-4896/adc2b0"
   type: "journal"
   topic: "evolution-equations"
+  image: "fig-ps-2025-burgers-cubic-quartic.webp"
+  image_alt: "Three-dimensional shock profiles from the Burgers equation with cubic and quartic nonlinearity"
+  image_credit: "Fig. 2 from the paper. © IOP Publishing; reproduced by the authors."
 
 - title: "Investigating the nonlinear dynamics of acoustic waves by analyzing the Kadomtsev–Petviashvili equation in an unmagnetized plasma"
   authors: "Fowziyah Zaman, Sagar Barua, M. G. Hafez, S. A. Iqbal"
@@ -429,6 +444,9 @@
   doi: "10.1088/1402-4896/ada20b"
   type: "journal"
   topic: "plasma-waves"
+  image: "fig-ps-2025-supercritical-phase-portraits.webp"
+  image_alt: "Phase portraits of ion-acoustic waves around the supercritical values"
+  image_credit: "Fig. 2 from the paper. © IOP Publishing; reproduced by the authors."
 
 - title: "Effects of the polarization force and coupling parameter on dust acoustic shocks around the critical and supercritical values in a strongly coupled dusty plasma"
   authors: "M. N. Islam, M. G. Hafez, R. Sakthivel"
@@ -441,3 +459,6 @@
   doi: "10.1007/s12648-024-03269-2"
   type: "journal"
   topic: "plasma-waves"
+  image: "fig-ijp-2025-dust-acoustic-shocks.webp"
+  image_alt: "Three-dimensional profiles of dust acoustic shock waves"
+  image_credit: "Fig. 7 from the paper. © Indian Association for the Cultivation of Science, published by Springer Nature; reproduced by the authors."
