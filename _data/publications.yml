@@ -40,6 +40,9 @@
   doi: "10.1016/j.asr.2026.09.001"
   type: "journal"
   topic: "plasma-waves"
+  image: "fig-asr-2026-venus-cylindrical-spherical.webp"
+  image_alt: "Profiles and three-dimensional plots of ion-acoustic overtaking multi-wave structures in Venus’ upper ionosphere"
+  image_credit: "Fig. 2 from the paper. © COSPAR, published by Elsevier; reproduced by the authors."
 
 - title: "Fractal-fractional analysis of COVID-19 double vaccination in Bangladesh: Theoretical and numerical insights from epidemiological data"
   authors: "Md. Jahidul Islam, Md. Mamun Sarkar, Md. Golam Hafez, Md. Joynul Abedin, Amanul Hoque"
@@ -217,6 +220,9 @@
   doi: "10.1016/j.asr.2025.12.043"
   type: "journal"
   topic: "plasma-waves"
+  image: "fig-asr-2026-venus-n-solitons.webp"
+  image_alt: "Three-dimensional plots of interacting ion-acoustic N-solitons for different values of q"
+  image_credit: "Fig. 12 from the paper. © COSPAR, published by Elsevier; reproduced by the authors."
 
 - title: "Neuronal Dynamics of an Intrinsically Bursting Neuron Through the Caputo–Fabrizio Fractal–Fractional Hodgkin–Huxley Model"
   authors: "M. J. Islam, M. J. Abedin, A. Hoque, M. G. Hafez"
